@@ -1,24 +1,15 @@
-
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-
-  return (
-    <header className="bg-white/95 backdrop-blur-sm border-b border-gray-100 sticky top-0 z-50">
+  return <header className="bg-white/95 backdrop-blur-sm border-b border-gray-100 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <img 
-              src="/lovable-uploads/dfb03ea5-aa2e-4225-b2ee-5646200da187.png" 
-              alt="Ekam Logo" 
-              className="h-24 w-auto object-fill" 
-            />
+            <img src="/lovable-uploads/dfb03ea5-aa2e-4225-b2ee-5646200da187.png" alt="Ekam Logo" className="h-36 w-auto object-fill" />
           </div>
 
           {/* Desktop Navigation */}
@@ -67,8 +58,6 @@ const Header = () => {
             </nav>
           </div>}
       </div>
-    </header>
-  );
+    </header>;
 };
-
 export default Header;
