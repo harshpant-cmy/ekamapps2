@@ -1,3 +1,4 @@
+
 import { useParams, Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -308,7 +309,8 @@ const AgentPage = () => {
           </CardHeader>
           <CardContent className="pt-0">
             <div className="grid lg:grid-cols-2 gap-6">
-              {agent.features.map((feature, index) => <div key={index} className="flex items-start space-x-4 p-4 rounded-lg bg-gray-50/50 hover:bg-gray-100/50 transition-colors">
+              {agent.features.map((feature, index) => (
+                <div key={index} className="flex items-start space-x-4 p-4 rounded-lg bg-gray-50/50 hover:bg-gray-100/50 transition-colors">
                   <div className={`p-3 rounded-lg bg-gradient-to-r ${agent.color} flex-shrink-0`}>
                     <feature.icon className="h-6 w-6 text-ekam-primary" />
                   </div>
@@ -316,7 +318,8 @@ const AgentPage = () => {
                     <h4 className="font-semibold text-gray-900 mb-2">{feature.title}</h4>
                     <p className="text-sm text-gray-600 leading-relaxed">{feature.description}</p>
                   </div>
-                </div>)}
+                </div>
+              ))}
             </div>
           </CardContent>
         </Card>
@@ -331,10 +334,12 @@ const AgentPage = () => {
           </CardHeader>
           <CardContent className="pt-0">
             <div className="grid lg:grid-cols-2 gap-4">
-              {agent.benefits.map((benefit, index) => <div key={index} className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50/50 transition-colors">
+              {agent.benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50/50 transition-colors">
                   <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
                   <span className="text-gray-700 leading-relaxed">{benefit}</span>
-                </div>)}
+                </div>
+              ))}
             </div>
           </CardContent>
         </Card>
@@ -347,7 +352,7 @@ const AgentPage = () => {
               <p className="text-lg opacity-95 mb-6 leading-relaxed">
                 Let's discuss how this AI agent can streamline your operations, boost productivity, and drive measurable results for your business.
               </p>
-              <Button size="lg" className="w-full bg-white text-ekam-primary hover:bg-gray-100 font-semibold" onClick={() => window.open('https://calendly.com/nitin26gupta/callwithnitin?month=2025-05', '_blank')}>
+              <Button size="lg" className="w-full bg-white text-ekam-primary hover:bg-gray-100 font-semibold" onClick={() => window.open('https://calendly.com/nitin26gupta/callwithnitin?month=2025-06', '_blank')}>
                 <Calendar className="h-5 w-5 mr-2" />
                 Schedule Your Free Consultation
               </Button>
@@ -363,7 +368,7 @@ const AgentPage = () => {
                   Get a comprehensive consultation including custom implementation strategy, ROI analysis, and integration roadmap tailored to your specific business needs.
                 </p>
               </div>
-              <Button variant="outline" size="lg" className="w-full border-2 border-ekam-primary text-ekam-primary hover:bg-ekam-primary hover:text-white font-semibold" onClick={() => window.open('https://calendly.com/nitin26gupta/callwithnitin?month=2025-05', '_blank')}>
+              <Button variant="outline" size="lg" className="w-full border-2 border-ekam-primary text-ekam-primary hover:bg-ekam-primary hover:text-white font-semibold" onClick={() => window.open('https://calendly.com/nitin26gupta/callwithnitin?month=2025-06', '_blank')}>
                 Book Your Strategy Session
               </Button>
             </CardContent>

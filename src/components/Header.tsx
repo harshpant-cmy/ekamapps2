@@ -14,7 +14,7 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="#home" className="block">
+            <a href="/" className="block">
               <img 
                 src="/lovable-uploads/dfb03ea5-aa2e-4225-b2ee-5646200da187.png" 
                 alt="Ekam Logo" 
@@ -26,21 +26,24 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <a 
-              href="#home" 
+              href="/#home" 
               className="text-gray-700 hover:text-ekam-primary transition-colors"
             >
               Home
             </a>
-            <a href="#about" className="text-gray-700 hover:text-ekam-primary transition-colors">
+            <a href="/#about" className="text-gray-700 hover:text-ekam-primary transition-colors">
               About
             </a>
-            <a href="#agents" className="text-gray-700 hover:text-ekam-primary transition-colors">
+            <a href="/#agents" className="text-gray-700 hover:text-ekam-primary transition-colors">
               AI Agents
             </a>
-            <a href="#contact" className="text-gray-700 hover:text-ekam-primary transition-colors">
+            <a href="/#contact" className="text-gray-700 hover:text-ekam-primary transition-colors">
               Contact
             </a>
-            <Button className="bg-ekam-primary hover:bg-ekam-primary/90 text-white">
+            <Button 
+              className="bg-ekam-primary hover:bg-ekam-primary/90 text-white"
+              onClick={() => window.open('https://calendly.com/nitin26gupta/callwithnitin?month=2025-06', '_blank')}
+            >
               Free Consultation
             </Button>
           </nav>
@@ -52,25 +55,33 @@ const Header = () => {
         </div>
 
         {/* Mobile Navigation */}
-        {isMenuOpen && <div className="md:hidden py-4 border-t border-gray-100">
+        {isMenuOpen && (
+          <div className="md:hidden py-4 border-t border-gray-100">
             <nav className="flex flex-col space-y-4">
-              <a href="#home" className="text-gray-700 hover:text-ekam-primary transition-colors" onClick={toggleMenu}>
+              <a href="/#home" className="text-gray-700 hover:text-ekam-primary transition-colors" onClick={toggleMenu}>
                 Home
               </a>
-              <a href="#about" className="text-gray-700 hover:text-ekam-primary transition-colors" onClick={toggleMenu}>
+              <a href="/#about" className="text-gray-700 hover:text-ekam-primary transition-colors" onClick={toggleMenu}>
                 About
               </a>
-              <a href="#agents" className="text-gray-700 hover:text-ekam-primary transition-colors" onClick={toggleMenu}>
+              <a href="/#agents" className="text-gray-700 hover:text-ekam-primary transition-colors" onClick={toggleMenu}>
                 AI Agents
               </a>
-              <a href="#contact" className="text-gray-700 hover:text-ekam-primary transition-colors" onClick={toggleMenu}>
+              <a href="/#contact" className="text-gray-700 hover:text-ekam-primary transition-colors" onClick={toggleMenu}>
                 Contact
               </a>
-              <Button className="bg-ekam-primary hover:bg-ekam-primary/90 text-white w-fit">
-                Book Demo
+              <Button 
+                className="bg-ekam-primary hover:bg-ekam-primary/90 text-white w-fit"
+                onClick={() => {
+                  window.open('https://calendly.com/nitin26gupta/callwithnitin?month=2025-06', '_blank');
+                  toggleMenu();
+                }}
+              >
+                Free Consultation
               </Button>
             </nav>
-          </div>}
+          </div>
+        )}
       </div>
     </header>
   );

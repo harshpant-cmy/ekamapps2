@@ -26,6 +26,12 @@ const Hero = () => {
             <Button 
               size="lg" 
               className="bg-ekam-primary hover:bg-ekam-primary/90 text-white group px-8"
+              onClick={() => {
+                const agentsSection = document.getElementById('agents');
+                if (agentsSection) {
+                  agentsSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
             >
               Explore Our Agents
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -34,7 +40,7 @@ const Hero = () => {
               size="lg" 
               variant="outline" 
               className="border-gray-300 text-gray-700 hover:bg-gray-50 px-8"
-              onClick={() => window.open('https://calendly.com/nitin26gupta/callwithnitin?month=2025-05', '_blank')}
+              onClick={() => window.open('https://calendly.com/nitin26gupta/callwithnitin?month=2025-06', '_blank')}
             >
               Book a Consultation
             </Button>
