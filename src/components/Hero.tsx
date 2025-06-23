@@ -4,7 +4,7 @@ import { ArrowRight, Bot, Clock, TrendingUp, Zap } from "lucide-react";
 const Hero = () => {
   return (
     <section id="home" className="min-h-screen bg-gradient-to-br from-white via-ekam-secondary/20 to-white flex items-center">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
           {/* Content */}
           <div className="space-y-8">
