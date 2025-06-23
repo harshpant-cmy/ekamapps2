@@ -1,10 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, Calendar, MapPin, Award, Users, Target, Building, Clock, Shield, Zap, TrendingUp } from "lucide-react";
-
 const Contact = () => {
-  return (
-    <section id="contact" className="py-16 bg-gradient-to-br from-gray-50 to-ekam-secondary/20">
+  return <section id="contact" className="py-16 bg-gradient-to-br from-gray-50 to-ekam-secondary/20">
       <div className="max-w-7xl mx-auto px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
@@ -127,7 +125,7 @@ const Contact = () => {
 
         {/* Enhanced CTA Section */}
         <Card className="bg-gradient-to-r from-ekam-primary via-ekam-primary/95 to-ekam-primary/90 text-white shadow-2xl overflow-hidden relative">
-          <CardContent className="p-12 text-center relative z-10">
+          <CardContent className="p-12 text-center relative z-10 bg-[#013a37]">
             <div className="max-w-4xl mx-auto">
               <Calendar className="h-20 w-20 mx-auto mb-8 opacity-90" />
               <h3 className="text-4xl font-bold mb-6">Book Your Free Consultation</h3>
@@ -158,12 +156,7 @@ const Contact = () => {
                 </div>
               </div>
               
-              <Button 
-                size="lg" 
-                variant="secondary" 
-                className="bg-white text-ekam-primary hover:bg-gray-100 font-bold text-xl py-6 px-12 shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 rounded-full" 
-                onClick={() => window.open('https://calendly.com/nitin26gupta/callwithnitin?month=2025-05', '_blank')}
-              >
+              <Button size="lg" variant="secondary" className="bg-white text-ekam-primary hover:bg-gray-100 font-bold text-xl py-6 px-12 shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 rounded-full" onClick={() => window.open('https://calendly.com/nitin26gupta/callwithnitin?month=2025-05', '_blank')}>
                 <Calendar className="mr-3 h-6 w-6" />
                 Schedule Free Consultation
               </Button>
@@ -171,8 +164,6 @@ const Contact = () => {
           </CardContent>
         </Card>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
