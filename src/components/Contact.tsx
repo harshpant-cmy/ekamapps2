@@ -1,7 +1,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, Calendar, MapPin } from "lucide-react";
+import { Mail, Phone, Calendar, MapPin, Award, Users, Target, Building, Clock, Shield, Zap, TrendingUp } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -16,14 +16,15 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 items-stretch">
-          {/* Contact Info */}
-          <div className="flex">
-            <Card className="border-l-4 border-l-ekam-primary w-full">
+        <div className="grid lg:grid-cols-2 gap-8">
+          {/* Left Column - Contact Info & Why Choose Ekam */}
+          <div className="space-y-8">
+            {/* Contact Info */}
+            <Card className="border-l-4 border-l-ekam-primary">
               <CardHeader>
                 <CardTitle className="text-2xl text-gray-900">Let's Connect</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-6 flex-1">
+              <CardContent className="space-y-6">
                 <div className="flex items-center space-x-4">
                   <div className="p-3 bg-ekam-primary/10 rounded-lg">
                     <Mail className="h-6 w-6 text-ekam-primary" />
@@ -69,11 +70,68 @@ const Contact = () => {
                 </div>
               </CardContent>
             </Card>
+
+            {/* Why Choose Ekam */}
+            <Card className="bg-white">
+              <CardContent className="p-8">
+                <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Why Choose Ekam?</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <div className="p-2 bg-ekam-primary/10 rounded-lg">
+                      <Award className="h-5 w-5 text-ekam-primary" />
+                    </div>
+                    <p className="text-gray-600">19+ years of industry experience</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="p-2 bg-ekam-primary/10 rounded-lg">
+                      <Building className="h-5 w-5 text-ekam-primary" />
+                    </div>
+                    <p className="text-gray-600">Proven track record with major brands</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="p-2 bg-ekam-primary/10 rounded-lg">
+                      <Target className="h-5 w-5 text-ekam-primary" />
+                    </div>
+                    <p className="text-gray-600">Custom AI solutions for every business</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="p-2 bg-ekam-primary/10 rounded-lg">
+                      <Users className="h-5 w-5 text-ekam-primary" />
+                    </div>
+                    <p className="text-gray-600">Ongoing support and optimization</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="p-2 bg-ekam-primary/10 rounded-lg">
+                      <Clock className="h-5 w-5 text-ekam-primary" />
+                    </div>
+                    <p className="text-gray-600">Fast implementation timelines</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="p-2 bg-ekam-primary/10 rounded-lg">
+                      <Shield className="h-5 w-5 text-ekam-primary" />
+                    </div>
+                    <p className="text-gray-600">Enterprise-grade security standards</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="p-2 bg-ekam-primary/10 rounded-lg">
+                      <Zap className="h-5 w-5 text-ekam-primary" />
+                    </div>
+                    <p className="text-gray-600">AI-powered automation solutions</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="p-2 bg-ekam-primary/10 rounded-lg">
+                      <TrendingUp className="h-5 w-5 text-ekam-primary" />
+                    </div>
+                    <p className="text-gray-600">Measurable ROI and business growth</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
 
-          {/* CTA Card */}
-          <div className="flex flex-col space-y-8">
-            <Card className="bg-gradient-to-br from-ekam-primary to-ekam-primary/90 text-white flex-1">
+          {/* Right Column - CTA Card */}
+          <div className="flex">
+            <Card className="bg-gradient-to-br from-ekam-primary to-ekam-primary/90 text-white w-full">
               <CardContent className="p-8 text-center bg-[#013a37] h-full flex flex-col justify-between">
                 <div>
                   <Calendar className="h-16 w-16 mx-auto mb-6 opacity-80" />
@@ -96,30 +154,6 @@ const Contact = () => {
                 >
                   Schedule Free Consultation
                 </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white">
-              <CardContent className="p-8 text-center">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Why Choose Ekam?</h3>
-                <div className="space-y-4 text-left">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-ekam-primary rounded-full mt-2"></div>
-                    <p className="text-gray-600">19+ years of industry experience</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-ekam-primary rounded-full mt-2"></div>
-                    <p className="text-gray-600">Proven track record with major brands</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-ekam-primary rounded-full mt-2"></div>
-                    <p className="text-gray-600">Custom AI solutions for every business</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-ekam-primary rounded-full mt-2"></div>
-                    <p className="text-gray-600">Ongoing support and optimization</p>
-                  </div>
-                </div>
               </CardContent>
             </Card>
           </div>
