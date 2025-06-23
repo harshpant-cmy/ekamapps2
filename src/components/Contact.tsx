@@ -125,7 +125,7 @@ const Contact = () => {
 
         {/* Enhanced CTA Section */}
         <Card className="bg-gradient-to-r from-ekam-primary via-ekam-primary/95 to-ekam-primary/90 text-white shadow-2xl overflow-hidden relative">
-          <CardContent className="p-12 text-center relative z-10 bg-[#013a37]">
+          <CardContent className="p-12 text-center relative z-10 bg-[#4d4d4d]">
             <div className="max-w-4xl mx-auto">
               <Calendar className="h-20 w-20 mx-auto mb-8 opacity-90" />
               <h3 className="text-4xl font-bold mb-6">Book Your Free Consultation</h3>
