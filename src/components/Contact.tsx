@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, Calendar, MapPin, Award, Users, Target, Building, Clock, Shield, Zap, TrendingUp } from "lucide-react";
@@ -26,6 +25,7 @@ const Contact = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
+              
               <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                 <div className="p-3 bg-ekam-primary/10 rounded-lg">
                   <Mail className="h-6 w-6 text-ekam-primary" />
@@ -81,6 +81,7 @@ const Contact = () => {
             </div>
             
             <div className="space-y-4">
+              
               <div className="flex items-start space-x-4 p-4 bg-white/10 rounded-lg backdrop-blur-sm">
                 <div className="p-2 bg-white/20 rounded-lg">
                   <Award className="h-5 w-5 text-white" />
@@ -126,7 +127,6 @@ const Contact = () => {
 
         {/* Enhanced CTA Section */}
         <Card className="bg-gradient-to-r from-ekam-primary via-ekam-primary/95 to-ekam-primary/90 text-white shadow-2xl overflow-hidden relative">
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23ffffff\" fill-opacity=\"0.05\"%3E%3Ccircle cx=\"30\" cy=\"30\" r=\"1.5\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
           <CardContent className="p-12 text-center relative z-10">
             <div className="max-w-4xl mx-auto">
               <Calendar className="h-20 w-20 mx-auto mb-8 opacity-90" />
