@@ -9,7 +9,7 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <img src="/lovable-uploads/dfb03ea5-aa2e-4225-b2ee-5646200da187.png" alt="Ekam Logo" className="h-16 w-auto" />
+            <img src="/lovable-uploads/dfb03ea5-aa2e-4225-b2ee-5646200da187.png" alt="Ekam Logo" className="h-16 w-auto object-fill" />
           </div>
 
           {/* Desktop Navigation */}
