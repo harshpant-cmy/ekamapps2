@@ -118,54 +118,62 @@
   
   /* Expand container widths for better screen utilization */
   .container {
-    @apply max-w-7xl px-8;
+    max-width: 80rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
   
   .max-w-7xl, .max-w-6xl, .max-w-5xl {
-    @apply max-w-7xl;
+    max-width: 80rem;
   }
   
   .max-w-4xl {
-    @apply max-w-6xl;
+    max-width: 72rem;
   }
   
   .space-y-16 > * + * {
-    @apply mt-12;
+    margin-top: 3rem;
   }
   
   .space-y-12 > * + * {
-    @apply mt-8;
+    margin-top: 2rem;
   }
   
   /* Increase padding for wider screens */
   .px-4 {
-    @apply px-8;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
   
   .px-6 {
-    @apply px-12;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
   
   .px-8 {
-    @apply px-16;
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 }
 
 /* Extra wide desktop optimization */
 @media (min-width: 1440px) {
   .container, .max-w-7xl, .max-w-6xl, .max-w-5xl, .max-w-4xl {
-    @apply max-w-screen-xl;
+    max-width: 1280px;
   }
   
   .px-4 {
-    @apply px-12;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
   
   .px-6 {
-    @apply px-16;
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
   
   .px-8 {
-    @apply px-20;
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 }
