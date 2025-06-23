@@ -1,12 +1,10 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, Calendar, MapPin, Award, Users, Target, Building, Clock, Shield, Zap, TrendingUp } from "lucide-react";
-
 const Contact = () => {
-  return (
-    <section id="contact" className="py-16 bg-gradient-to-br from-gray-50 to-ekam-secondary/20">
+  return <section id="contact" className="py-12 bg-gradient-to-br from-gray-50 to-ekam-secondary/20">
       <div className="max-w-7xl mx-auto px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
             Get Started Today
           </h2>
@@ -15,18 +13,14 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
-          {/* Contact Info - Left Side */}
-          <Card className="border-l-4 border-l-ekam-primary shadow-lg">
+        <div className="space-y-8">
+          {/* Contact Info */}
+          <Card className="border-l-4 border-l-ekam-primary">
             <CardHeader>
-              <CardTitle className="text-2xl text-gray-900 flex items-center space-x-3">
-                <Mail className="h-8 w-8 text-ekam-primary" />
-                <span>Let's Connect</span>
-              </CardTitle>
+              <CardTitle className="text-2xl text-gray-900">Let's Connect</CardTitle>
             </CardHeader>
-            <CardContent className="space-y-6">
-              
-              <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+            <CardContent className="grid grid-cols-1 gap-6">
+              <div className="flex items-center space-x-4">
                 <div className="p-3 bg-ekam-primary/10 rounded-lg">
                   <Mail className="h-6 w-6 text-ekam-primary" />
                 </div>
@@ -38,7 +32,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+              <div className="flex items-center space-x-4">
                 <div className="p-3 bg-ekam-primary/10 rounded-lg">
                   <Phone className="h-6 w-6 text-ekam-primary" />
                 </div>
@@ -50,7 +44,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+              <div className="flex items-center space-x-4">
                 <div className="p-3 bg-ekam-primary/10 rounded-lg">
                   <Calendar className="h-6 w-6 text-ekam-primary" />
                 </div>
@@ -60,7 +54,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+              <div className="flex items-center space-x-4">
                 <div className="p-3 bg-ekam-primary/10 rounded-lg">
                   <MapPin className="h-6 w-6 text-ekam-primary" />
                 </div>
@@ -72,107 +66,84 @@ const Contact = () => {
             </CardContent>
           </Card>
 
-          {/* Why Choose Ekam - Right Side - Enhanced */}
-          <div className="bg-gradient-to-br from-ekam-primary to-ekam-primary/90 rounded-xl p-8 text-white shadow-xl">
-            <div className="text-center mb-8">
-              <Award className="h-12 w-12 mx-auto mb-4 opacity-90" />
-              <h3 className="text-3xl font-bold mb-4">Why Choose Ekam?</h3>
-              <p className="text-lg opacity-90">Trusted by businesses worldwide for AI transformation</p>
-            </div>
-            
-            <div className="space-y-4">
-              
-              <div className="flex items-start space-x-4 p-4 bg-white/10 rounded-lg backdrop-blur-sm">
-                <div className="p-2 bg-white/20 rounded-lg">
-                  <Award className="h-5 w-5 text-white" />
+          {/* Why Choose Ekam */}
+          <Card className="bg-white">
+            <CardContent className="p-8">
+              <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Why Choose Ekam?</h3>
+              <div className="grid grid-cols-2 gap-6 bg-[s] bg-[#013a37]">
+                <div className="flex items-start space-x-3">
+                  <div className="p-2 bg-ekam-primary/10 rounded-lg">
+                    <Award className="h-5 w-5 text-ekam-primary" />
+                  </div>
+                  <p className="text-gray-600">19+ years of industry experience</p>
                 </div>
-                <div>
-                  <p className="font-semibold text-white">19+ years of industry experience</p>
-                  <p className="text-sm opacity-90">Proven expertise in business transformation</p>
+                <div className="flex items-start space-x-3">
+                  <div className="p-2 bg-ekam-primary/10 rounded-lg">
+                    <Building className="h-5 w-5 text-ekam-primary" />
+                  </div>
+                  <p className="text-gray-600">Proven track record with major brands</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="p-2 bg-ekam-primary/10 rounded-lg">
+                    <Target className="h-5 w-5 text-ekam-primary" />
+                  </div>
+                  <p className="text-gray-600">Custom AI solutions for every business</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="p-2 bg-ekam-primary/10 rounded-lg">
+                    <Users className="h-5 w-5 text-ekam-primary" />
+                  </div>
+                  <p className="text-gray-600">Ongoing support and optimization</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="p-2 bg-ekam-primary/10 rounded-lg">
+                    <Clock className="h-5 w-5 text-ekam-primary" />
+                  </div>
+                  <p className="text-gray-600">Fast implementation timelines</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="p-2 bg-ekam-primary/10 rounded-lg">
+                    <Shield className="h-5 w-5 text-ekam-primary" />
+                  </div>
+                  <p className="text-gray-600">Enterprise-grade security standards</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="p-2 bg-ekam-primary/10 rounded-lg">
+                    <Zap className="h-5 w-5 text-ekam-primary" />
+                  </div>
+                  <p className="text-gray-600">AI-powered automation solutions</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="p-2 bg-ekam-primary/10 rounded-lg">
+                    <TrendingUp className="h-5 w-5 text-ekam-primary" />
+                  </div>
+                  <p className="text-gray-600">Measurable ROI and business growth</p>
                 </div>
               </div>
+            </CardContent>
+          </Card>
 
-              <div className="flex items-start space-x-4 p-4 bg-white/10 rounded-lg backdrop-blur-sm">
-                <div className="p-2 bg-white/20 rounded-lg">
-                  <Building className="h-5 w-5 text-white" />
-                </div>
-                <div>
-                  <p className="font-semibold text-white">Proven track record with major brands</p>
-                  <p className="text-sm opacity-90">Trusted by industry leaders worldwide</p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4 p-4 bg-white/10 rounded-lg backdrop-blur-sm">
-                <div className="p-2 bg-white/20 rounded-lg">
-                  <Target className="h-5 w-5 text-white" />
-                </div>
-                <div>
-                  <p className="font-semibold text-white">Custom AI solutions for every business</p>
-                  <p className="text-sm opacity-90">Tailored to your specific needs</p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4 p-4 bg-white/10 rounded-lg backdrop-blur-sm">
-                <div className="p-2 bg-white/20 rounded-lg">
-                  <TrendingUp className="h-5 w-5 text-white" />
-                </div>
-                <div>
-                  <p className="font-semibold text-white">Measurable ROI and business growth</p>
-                  <p className="text-sm opacity-90">Proven results that drive success</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Enhanced CTA Section */}
-        <Card className="bg-gradient-to-r from-ekam-primary via-ekam-primary/95 to-ekam-primary/90 text-white shadow-2xl overflow-hidden relative">
-          <CardContent className="p-12 text-center relative z-10">
-            <div className="max-w-4xl mx-auto">
-              <Calendar className="h-20 w-20 mx-auto mb-8 opacity-90" />
-              <h3 className="text-4xl font-bold mb-6">Book Your Free Consultation</h3>
-              <p className="text-xl opacity-95 mb-8 leading-relaxed">
+          {/* CTA Card */}
+          <Card className="bg-gradient-to-br from-ekam-primary to-ekam-primary/90 text-white bg-[#013a37]">
+            <CardContent className="p-8 text-center bg-[#013a37]">
+              <Calendar className="h-16 w-16 mx-auto mb-6 opacity-80" />
+              <h3 className="text-2xl font-bold mb-4">Book Your Free Consultation</h3>
+              <p className="text-lg opacity-90 mb-6">
                 See how our AI agents can transform your business operations in just 30 minutes.
               </p>
-              
-              <div className="grid md:grid-cols-2 gap-6 mb-10 text-lg">
-                <div className="space-y-3 text-left">
-                  <div className="flex items-center justify-start space-x-3">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                    <span>Personalized AI solution walkthrough</span>
-                  </div>
-                  <div className="flex items-center justify-start space-x-3">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                    <span>Custom workflow demonstration</span>
-                  </div>
-                </div>
-                <div className="space-y-3 text-left">
-                  <div className="flex items-center justify-start space-x-3">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                    <span>ROI analysis for your business</span>
-                  </div>
-                  <div className="flex items-center justify-start space-x-3">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                    <span>Implementation timeline discussion</span>
-                  </div>
-                </div>
+              <div className="grid grid-cols-2 gap-x-4 gap-y-2 mb-8 opacity-90 text-base">
+                <div className="text-left">✓ Personalized AI solution walkthrough</div>
+                <div className="text-right">✓ ROI analysis for your business</div>
+                <div className="text-left">✓ Custom workflow demonstration</div>
+                <div className="text-right">✓ Implementation timeline discussion</div>
               </div>
-              
-              <Button 
-                size="lg" 
-                variant="secondary" 
-                className="bg-white text-ekam-primary hover:bg-gray-100 font-bold text-xl py-6 px-12 shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 rounded-full" 
-                onClick={() => window.open('https://calendly.com/nitin26gupta/callwithnitin?month=2025-05', '_blank')}
-              >
-                <Calendar className="mr-3 h-6 w-6" />
+              <Button size="lg" variant="secondary" className="w-full max-w-md bg-white text-ekam-primary hover:bg-gray-100 font-bold text-lg py-4 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200" onClick={() => window.open('https://calendly.com/nitin26gupta/callwithnitin?month=2025-05', '_blank')}>
                 Schedule Free Consultation
               </Button>
-            </div>
-          </CardContent>
-        </Card>
+            </CardContent>
+          </Card>
+        </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
