@@ -135,11 +135,11 @@ const Contact = () => {
               <p className="text-lg opacity-90 mb-6">
                 See how our AI agents can transform your business operations in just 30 minutes.
               </p>
-              <div className="grid grid-cols-2 gap-2 mb-8 opacity-90 text-sm">
+              <div className="grid grid-cols-2 gap-2 mb-8 opacity-90 text-base">
                 <div className="text-left">✓ Personalized AI solution walkthrough</div>
-                <div className="text-left">✓ ROI analysis for your business</div>
+                <div className="text-right">✓ ROI analysis for your business</div>
                 <div className="text-left">✓ Custom workflow demonstration</div>
-                <div className="text-left">✓ Implementation timeline discussion</div>
+                <div className="text-right">✓ Implementation timeline discussion</div>
               </div>
               <Button 
                 size="lg" 
