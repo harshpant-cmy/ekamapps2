@@ -1,11 +1,18 @@
 import { Mail, Phone, ExternalLink } from "lucide-react";
 const Footer = () => {
-  return <footer className="bg-ekam-primary text-white">
+  return (
+    <footer className="bg-ekam-primary text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <img src="/lovable-uploads/dfb03ea5-aa2e-4225-b2ee-5646200da187.png" alt="Ekam Logo" className="max-h-36 w-auto filter brightness-0 invert" />
+            <a href="#home" className="block">
+              <img 
+                src="/lovable-uploads/dfb03ea5-aa2e-4225-b2ee-5646200da187.png" 
+                alt="Ekam Logo" 
+                className="max-h-36 w-auto filter brightness-0 invert hover:opacity-80 transition-opacity cursor-pointer" 
+              />
+            </a>
             <p className="text-ekam-secondary/80 text-sm">
               Transform Your Business With AI-Powered Automation
             </p>
@@ -66,6 +73,8 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;

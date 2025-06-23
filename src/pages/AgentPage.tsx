@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, CheckCircle, Star, Calendar, Shield, Zap, Target, TrendingUp, Clock, Users, BarChart3, Globe, MessageSquare, Settings, Eye, Headphones, FileText, Search } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+
 const agentsData = {
   "lead-enrichment": {
     title: "Lead Enrichment Agent",
@@ -246,15 +247,14 @@ const agentsData = {
     color: "from-slate-500/10 to-slate-600/10"
   }
 };
+
 const AgentPage = () => {
-  const {
-    agentId
-  } = useParams<{
-    agentId: string;
-  }>();
+  const { agentId } = useParams<{ agentId: string }>();
   const agent = agentId ? agentsData[agentId as keyof typeof agentsData] : null;
+
   if (!agent) {
-    return <div className="min-h-screen bg-gray-50">
+    return (
+      <div className="min-h-screen bg-gray-50">
         <Header />
         <div className="max-w-7xl mx-auto px-8 py-20 text-center">
           <h1 className="text-2xl font-bold text-gray-900 mb-4">Agent Not Found</h1>
@@ -263,9 +263,12 @@ const AgentPage = () => {
           </Link>
         </div>
         <Footer />
-      </div>;
+      </div>
+    );
   }
-  return <div className="min-h-screen bg-gray-50">
+
+  return (
+    <div className="min-h-screen bg-gray-50">
       <Header />
       
       <div className="max-w-7xl mx-auto px-8 py-8">
@@ -369,6 +372,8 @@ const AgentPage = () => {
       </div>
       
       <Footer />
-    </div>;
+    </div>
+  );
 };
+
 export default AgentPage;
