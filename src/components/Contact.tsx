@@ -126,7 +126,7 @@ const Contact = () => {
 
         {/* Enhanced CTA Section */}
         <Card className="bg-gradient-to-r from-ekam-primary via-ekam-primary/95 to-ekam-primary/90 text-white shadow-2xl overflow-hidden relative">
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="1.5"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23ffffff\" fill-opacity=\"0.05\"%3E%3Ccircle cx=\"30\" cy=\"30\" r=\"1.5\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
           <CardContent className="p-12 text-center relative z-10">
             <div className="max-w-4xl mx-auto">
               <Calendar className="h-20 w-20 mx-auto mb-8 opacity-90" />
@@ -136,7 +136,7 @@ const Contact = () => {
               </p>
               
               <div className="grid md:grid-cols-2 gap-6 mb-10 text-lg">
-                <div className="space-y-3">
+                <div className="space-y-3 text-left">
                   <div className="flex items-center justify-start space-x-3">
                     <div className="w-2 h-2 bg-white rounded-full"></div>
                     <span>Personalized AI solution walkthrough</span>
@@ -146,7 +146,7 @@ const Contact = () => {
                     <span>Custom workflow demonstration</span>
                   </div>
                 </div>
-                <div className="space-y-3">
+                <div className="space-y-3 text-left">
                   <div className="flex items-center justify-start space-x-3">
                     <div className="w-2 h-2 bg-white rounded-full"></div>
                     <span>ROI analysis for your business</span>
