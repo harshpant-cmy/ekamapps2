@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, Calendar, MapPin, Award, Users, Target, Building, Clock, Shield, Zap, TrendingUp } from "lucide-react";
@@ -126,7 +125,7 @@ const Contact = () => {
 
         {/* Enhanced CTA Section */}
         <Card className="bg-gradient-to-r from-ekam-primary via-ekam-primary/95 to-ekam-primary/90 text-white shadow-2xl overflow-hidden relative">
-          <CardContent className="p-12 text-center relative z-10 bg-[#4d4d4d]">
+          <CardContent className="p-12 text-center relative z-10 bg-[#a8a8a8]">
             <div className="max-w-4xl mx-auto">
               <Calendar className="h-20 w-20 mx-auto mb-8 opacity-90" />
               <h3 className="text-4xl font-bold mb-6">Book Your Free Consultation</h3>
