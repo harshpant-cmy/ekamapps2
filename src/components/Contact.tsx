@@ -1,8 +1,11 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, Calendar, MapPin } from "lucide-react";
+
 const Contact = () => {
-  return <section id="contact" className="py-20 bg-gradient-to-br from-gray-50 to-ekam-secondary/20">
+  return (
+    <section id="contact" className="py-20 bg-gradient-to-br from-gray-50 to-ekam-secondary/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
@@ -13,14 +16,14 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 items-stretch">
           {/* Contact Info */}
-          <div className="space-y-8">
-            <Card className="border-l-4 border-l-ekam-primary">
+          <div className="flex">
+            <Card className="border-l-4 border-l-ekam-primary w-full">
               <CardHeader>
                 <CardTitle className="text-2xl text-gray-900">Let's Connect</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-6">
+              <CardContent className="space-y-6 flex-1">
                 <div className="flex items-center space-x-4">
                   <div className="p-3 bg-ekam-primary/10 rounded-lg">
                     <Mail className="h-6 w-6 text-ekam-primary" />
@@ -69,21 +72,28 @@ const Contact = () => {
           </div>
 
           {/* CTA Card */}
-          <div className="space-y-8">
-            <Card className="bg-gradient-to-br from-ekam-primary to-ekam-primary/90 text-white">
-              <CardContent className="p-8 text-center bg-[#013a37]">
-                <Calendar className="h-16 w-16 mx-auto mb-6 opacity-80" />
-                <h3 className="text-2xl font-bold mb-4">Book Your Free Consultation</h3>
-                <p className="text-lg opacity-90 mb-6">
-                  See how our AI agents can transform your business operations in just 30 minutes.
-                </p>
-                <ul className="text-left space-y-2 mb-8 opacity-90">
-                  <li>✓ Personalized AI solution walkthrough</li>
-                  <li>✓ Custom workflow demonstratio</li>
-                  <li>✓ ROI analysis for your business</li>
-                  <li>✓ Implementation timeline discussion</li>
-                </ul>
-                <Button size="lg" variant="secondary" className="w-full bg-white text-ekam-primary hover:bg-gray-100 font-bold text-lg py-4 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200" onClick={() => window.open('https://calendly.com/nitin26gupta/callwithnitin?month=2025-05', '_blank')}>
+          <div className="flex flex-col space-y-8">
+            <Card className="bg-gradient-to-br from-ekam-primary to-ekam-primary/90 text-white flex-1">
+              <CardContent className="p-8 text-center bg-[#013a37] h-full flex flex-col justify-between">
+                <div>
+                  <Calendar className="h-16 w-16 mx-auto mb-6 opacity-80" />
+                  <h3 className="text-2xl font-bold mb-4">Book Your Free Consultation</h3>
+                  <p className="text-lg opacity-90 mb-6">
+                    See how our AI agents can transform your business operations in just 30 minutes.
+                  </p>
+                  <ul className="text-left space-y-2 mb-8 opacity-90">
+                    <li>✓ Personalized AI solution walkthrough</li>
+                    <li>✓ Custom workflow demonstration</li>
+                    <li>✓ ROI analysis for your business</li>
+                    <li>✓ Implementation timeline discussion</li>
+                  </ul>
+                </div>
+                <Button 
+                  size="lg" 
+                  variant="secondary" 
+                  className="w-full bg-white text-ekam-primary hover:bg-gray-100 font-bold text-lg py-4 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200" 
+                  onClick={() => window.open('https://calendly.com/nitin26gupta/callwithnitin?month=2025-05', '_blank')}
+                >
                   Schedule Free Consultation
                 </Button>
               </CardContent>
@@ -115,6 +125,8 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Contact;
