@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, Calendar, MapPin, Award, Users, Target, Building, Clock, Shield, Zap, TrendingUp } from "lucide-react";
@@ -72,7 +73,7 @@ const Contact = () => {
           <Card className="bg-white">
             <CardContent className="p-8">
               <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Why Choose Ekam?</h3>
-              <div className="grid grid-cols-1 gap-6">
+              <div className="grid grid-cols-2 gap-6">
                 <div className="flex items-start space-x-3">
                   <div className="p-2 bg-ekam-primary/10 rounded-lg">
                     <Award className="h-5 w-5 text-ekam-primary" />
@@ -133,11 +134,11 @@ const Contact = () => {
               <p className="text-lg opacity-90 mb-6">
                 See how our AI agents can transform your business operations in just 30 minutes.
               </p>
-              <div className="grid grid-cols-2 gap-2 mb-8 opacity-90 text-base">
+              <div className="grid grid-cols-2 gap-x-4 gap-y-2 mb-8 opacity-90 text-base">
                 <div className="text-left">✓ Personalized AI solution walkthrough</div>
-                <div className="text-left">✓ ROI analysis for your business</div>
+                <div className="text-right">✓ ROI analysis for your business</div>
                 <div className="text-left">✓ Custom workflow demonstration</div>
-                <div className="text-left">✓ Implementation timeline discussion</div>
+                <div className="text-right">✓ Implementation timeline discussion</div>
               </div>
               <Button 
                 size="lg" 
