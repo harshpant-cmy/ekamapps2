@@ -11,7 +11,7 @@ const Footer = () => {
             <img 
               src="/lovable-uploads/dfb03ea5-aa2e-4225-b2ee-5646200da187.png" 
               alt="Ekam Logo"
-              className="h-8 w-auto brightness-0 invert"
+              className="h-12 w-auto brightness-0 invert"
             />
             <p className="text-ekam-secondary/80 text-sm">
               Transform Your Business With AI-Powered Automation
