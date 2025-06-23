@@ -6,12 +6,12 @@ import { Mail, Phone, Calendar, MapPin, Award, Users, Target, Building, Clock, S
 const Contact = () => {
   return (
     <section id="contact" className="py-12 bg-gradient-to-br from-gray-50 to-ekam-secondary/20">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
             Get Started Today
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Ready to transform your business with AI? Let's discuss how our solutions can help you achieve your goals.
           </p>
         </div>
@@ -22,7 +22,7 @@ const Contact = () => {
             <CardHeader>
               <CardTitle className="text-2xl text-gray-900">Let's Connect</CardTitle>
             </CardHeader>
-            <CardContent className="grid md:grid-cols-2 gap-6">
+            <CardContent className="grid lg:grid-cols-4 md:grid-cols-2 gap-6">
               <div className="flex items-center space-x-4">
                 <div className="p-3 bg-ekam-primary/10 rounded-lg">
                   <Mail className="h-6 w-6 text-ekam-primary" />
@@ -71,9 +71,9 @@ const Contact = () => {
 
           {/* Why Choose Ekam */}
           <Card className="bg-white">
-            <CardContent className="p-6">
+            <CardContent className="p-8">
               <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Why Choose Ekam?</h3>
-              <div className="grid md:grid-cols-2 gap-4">
+              <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-6">
                 <div className="flex items-start space-x-3">
                   <div className="p-2 bg-ekam-primary/10 rounded-lg">
                     <Award className="h-5 w-5 text-ekam-primary" />
@@ -134,7 +134,7 @@ const Contact = () => {
               <p className="text-lg opacity-90 mb-6">
                 See how our AI agents can transform your business operations in just 30 minutes.
               </p>
-              <div className="grid md:grid-cols-2 gap-2 mb-8 opacity-90 text-sm">
+              <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-2 mb-8 opacity-90 text-sm">
                 <div className="text-left">✓ Personalized AI solution walkthrough</div>
                 <div className="text-left">✓ Custom workflow demonstration</div>
                 <div className="text-left">✓ ROI analysis for your business</div>

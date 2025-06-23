@@ -217,7 +217,7 @@ const AgentPage = () => {
     return (
       <div className="min-h-screen bg-gray-50">
         <Header />
-        <div className="max-w-4xl mx-auto px-4 py-20 text-center">
+        <div className="max-w-7xl mx-auto px-8 py-20 text-center">
           <h1 className="text-2xl font-bold text-gray-900 mb-4">Agent Not Found</h1>
           <Link to="/" className="text-ekam-primary hover:underline">
             Return to Home
@@ -232,7 +232,7 @@ const AgentPage = () => {
     <div className="min-h-screen bg-gray-50">
       <Header />
       
-      <div className="max-w-5xl mx-auto px-4 py-8">
+      <div className="max-w-7xl mx-auto px-8 py-8">
         {/* Back Button */}
         <Link 
           to="/" 
@@ -275,7 +275,7 @@ const AgentPage = () => {
             </CardTitle>
           </CardHeader>
           <CardContent className="pt-0">
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid lg:grid-cols-2 gap-6">
               {agent.features.map((feature, index) => (
                 <div key={index} className="flex items-start space-x-4 p-4 rounded-lg bg-gray-50/50 hover:bg-gray-100/50 transition-colors">
                   <div className={`p-3 rounded-lg bg-gradient-to-r ${agent.color} flex-shrink-0`}>
@@ -300,7 +300,7 @@ const AgentPage = () => {
             </CardTitle>
           </CardHeader>
           <CardContent className="pt-0">
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid lg:grid-cols-2 gap-4">
               {agent.benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50/50 transition-colors">
                   <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
@@ -312,7 +312,7 @@ const AgentPage = () => {
         </Card>
 
         {/* CTA Section */}
-        <div className="grid lg:grid-cols-2 gap-6">
+        <div className="grid xl:grid-cols-2 gap-6">
           <Card className="border-0 shadow-lg bg-gradient-to-r from-ekam-primary to-ekam-primary/90 text-white">
             <CardContent className="p-8 text-center">
               <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Business?</h3>
