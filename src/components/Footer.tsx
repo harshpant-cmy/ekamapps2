@@ -5,7 +5,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <img src="/lovable-uploads/dfb03ea5-aa2e-4225-b2ee-5646200da187.png" alt="Ekam Logo" className="max-h-20 w-auto filter brightness-0 invert" />
+            <img src="/lovable-uploads/dfb03ea5-aa2e-4225-b2ee-5646200da187.png" alt="Ekam Logo" className="max-h-36 w-auto filter brightness-0 invert" />
             <p className="text-ekam-secondary/80 text-sm">
               Transform Your Business With AI-Powered Automation
             </p>
