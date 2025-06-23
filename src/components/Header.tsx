@@ -14,11 +14,13 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <img 
-              src="/lovable-uploads/dfb03ea5-aa2e-4225-b2ee-5646200da187.png" 
-              alt="Ekam Logo" 
-              className="h-36 w-auto object-fill" 
-            />
+            <a href="#home" className="block">
+              <img 
+                src="/lovable-uploads/dfb03ea5-aa2e-4225-b2ee-5646200da187.png" 
+                alt="Ekam Logo" 
+                className="h-36 w-auto object-fill hover:opacity-80 transition-opacity cursor-pointer" 
+              />
+            </a>
           </div>
 
           {/* Desktop Navigation */}
