@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, Calendar, MapPin, Award, Users, Target, Building, Clock, Shield, Zap, TrendingUp } from "lucide-react";
@@ -73,7 +72,7 @@ const Contact = () => {
           <Card className="bg-white">
             <CardContent className="p-8">
               <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Why Choose Ekam?</h3>
-              <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 gap-6">
                 <div className="flex items-start space-x-3">
                   <div className="p-2 bg-ekam-primary/10 rounded-lg">
                     <Award className="h-5 w-5 text-ekam-primary" />
