@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, Calendar, MapPin } from "lucide-react";
@@ -72,7 +71,7 @@ const Contact = () => {
           {/* CTA Card */}
           <div className="space-y-8">
             <Card className="bg-gradient-to-br from-ekam-primary to-ekam-primary/90 text-white">
-              <CardContent className="p-8 text-center">
+              <CardContent className="p-8 text-center bg-[#013a37]">
                 <Calendar className="h-16 w-16 mx-auto mb-6 opacity-80" />
                 <h3 className="text-2xl font-bold mb-4">Book Your Free Consultation</h3>
                 <p className="text-lg opacity-90 mb-6">
@@ -84,12 +83,7 @@ const Contact = () => {
                   <li>✓ ROI analysis for your business</li>
                   <li>✓ Implementation timeline discussion</li>
                 </ul>
-                <Button 
-                  size="lg" 
-                  variant="secondary" 
-                  className="w-full bg-white text-ekam-primary hover:bg-gray-100 font-bold text-lg py-4 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200" 
-                  onClick={() => window.open('https://calendly.com/nitin26gupta/callwithnitin?month=2025-05', '_blank')}
-                >
+                <Button size="lg" variant="secondary" className="w-full bg-white text-ekam-primary hover:bg-gray-100 font-bold text-lg py-4 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200" onClick={() => window.open('https://calendly.com/nitin26gupta/callwithnitin?month=2025-05', '_blank')}>
                   Schedule Free Consultation
                 </Button>
               </CardContent>
