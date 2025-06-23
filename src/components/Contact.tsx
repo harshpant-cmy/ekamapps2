@@ -22,7 +22,7 @@ const Contact = () => {
             <CardHeader>
               <CardTitle className="text-2xl text-gray-900">Let's Connect</CardTitle>
             </CardHeader>
-            <CardContent className="grid lg:grid-cols-4 md:grid-cols-2 gap-6">
+            <CardContent className="grid grid-cols-1 gap-6">
               <div className="flex items-center space-x-4">
                 <div className="p-3 bg-ekam-primary/10 rounded-lg">
                   <Mail className="h-6 w-6 text-ekam-primary" />
