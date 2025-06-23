@@ -71,11 +71,11 @@ const Contact = () => {
           </Card>
 
           {/* Why Choose Ekam - Right Side - Enhanced */}
-          <div className="bg-gradient-to-br from-ekam-primary to-ekam-primary/90 rounded-xl p-8 text-white shadow-xl">
+          <div className="from-ekam-primary to-ekam-primary/90 rounded-xl p-8 text-white shadow-xl bg-[s] bg-[#013a37]">
             <div className="text-center mb-8">
               <Award className="h-12 w-12 mx-auto mb-4 opacity-90" />
-              <h3 className="text-3xl font-bold mb-4">Why Choose Ekam?</h3>
-              <p className="text-lg opacity-90">Trusted by businesses worldwide for AI transformation</p>
+              <h3 className="text-3xl font-bold mb-4 text-slate-950">Why Choose Ekam?</h3>
+              <p className="text-lg opacity-90 text-slate-950">Trusted by businesses worldwide for AI transformation</p>
             </div>
             
             <div className="space-y-4">
