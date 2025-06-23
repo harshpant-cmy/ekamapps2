@@ -14,9 +14,11 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="text-2xl font-bold text-ekam-primary">
-              EKAM
-            </div>
+            <img 
+              src="/lovable-uploads/dfb03ea5-aa2e-4225-b2ee-5646200da187.png" 
+              alt="Ekam Logo"
+              className="h-8 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}
