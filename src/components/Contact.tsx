@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, Calendar, MapPin, Award, Users, Target, Building, Clock, Shield, Zap, TrendingUp } from "lucide-react";
@@ -144,14 +145,14 @@ const Contact = () => {
                     <span>Custom workflow demonstration</span>
                   </div>
                 </div>
-                <div className="space-y-3 text-left">
-                  <div className="flex items-center justify-start space-x-3">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                <div className="space-y-3 text-right">
+                  <div className="flex items-center justify-end space-x-3">
                     <span>ROI analysis for your business</span>
-                  </div>
-                  <div className="flex items-center justify-start space-x-3">
                     <div className="w-2 h-2 bg-white rounded-full"></div>
+                  </div>
+                  <div className="flex items-center justify-end space-x-3">
                     <span>Implementation timeline discussion</span>
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
                   </div>
                 </div>
               </div>
