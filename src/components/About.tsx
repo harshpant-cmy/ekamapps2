@@ -20,9 +20,18 @@ const About = () => {
           <div className="space-y-6">
             <Card className="border-l-4 border-l-ekam-primary">
               <CardHeader>
-                <div className="space-y-2">
-                  <h3 className="text-2xl font-bold text-gray-900">Nitin Gupta</h3>
-                  <p className="text-lg text-ekam-primary font-semibold">Founder & CEO</p>
+                <div className="flex items-center space-x-6">
+                  <div className="w-24 h-24 rounded-full overflow-hidden flex-shrink-0">
+                    <img 
+                      src="/lovable-uploads/f51f535d-b175-4696-9d43-7c25ca27c315.png" 
+                      alt="Nitin Gupta - Founder & CEO"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <h3 className="text-2xl font-bold text-gray-900">Nitin Gupta</h3>
+                    <p className="text-lg text-ekam-primary font-semibold">Founder & CEO</p>
+                  </div>
                 </div>
               </CardHeader>
               <CardContent className="space-y-4">
