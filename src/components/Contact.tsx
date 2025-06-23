@@ -1,4 +1,5 @@
 
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, Calendar, MapPin, Award, Users, Target, Building, Clock, Shield, Zap, TrendingUp } from "lucide-react";
@@ -134,10 +135,10 @@ const Contact = () => {
               <p className="text-lg opacity-90 mb-6">
                 See how our AI agents can transform your business operations in just 30 minutes.
               </p>
-              <div className="grid grid-cols-1 gap-2 mb-8 opacity-90 text-sm">
+              <div className="grid grid-cols-2 gap-2 mb-8 opacity-90 text-sm">
                 <div className="text-left">✓ Personalized AI solution walkthrough</div>
-                <div className="text-left">✓ Custom workflow demonstration</div>
                 <div className="text-left">✓ ROI analysis for your business</div>
+                <div className="text-left">✓ Custom workflow demonstration</div>
                 <div className="text-left">✓ Implementation timeline discussion</div>
               </div>
               <Button 
@@ -157,3 +158,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
