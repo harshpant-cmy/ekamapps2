@@ -1,4 +1,5 @@
 
+
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
@@ -10,7 +11,7 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <img src="/lovable-uploads/dfb03ea5-aa2e-4225-b2ee-5646200da187.png" alt="Ekam Logo" className="h-24 w-auto object-fill" />
+            <img src="/lovable-uploads/dfb03ea5-aa2e-4225-b2ee-5646200da187.png" alt="Ekam Logo" className="h-30 w-auto object-fill" />
           </div>
 
           {/* Desktop Navigation */}
@@ -60,3 +61,4 @@ const Header = () => {
     </header>;
 };
 export default Header;
+
