@@ -86,19 +86,6 @@ const About = () => {
             </Card>
           </div>
         </div>
-
-        {/* Company Info */}
-        <div className="mt-16 text-center">
-          <Card className="bg-gradient-to-r from-ekam-primary to-ekam-primary/90 text-white">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
-              <p className="text-lg opacity-90 max-w-4xl mx-auto">
-                We build intelligent AI solutions that simplify complexity, streamline processes, 
-                and accelerate growth—empowering your team to achieve more with less effort.
-              </p>
-            </CardContent>
-          </Card>
-        </div>
       </div>
     </section>
   );
