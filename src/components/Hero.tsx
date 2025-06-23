@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Bot, Clock, TrendingUp } from "lucide-react";
+import { ArrowRight, Bot, Clock, TrendingUp, Zap } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -53,7 +53,12 @@ const Hero = () => {
                   <h3 className="font-semibold text-gray-900 mb-2">Save Time</h3>
                   <p className="text-sm text-gray-600">Focus on creative tasks while AI handles routine work</p>
                 </div>
-                <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow col-span-2">
+                <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                  <Zap className="h-12 w-12 text-ekam-primary mb-4" />
+                  <h3 className="font-semibold text-gray-900 mb-2">Efficiency</h3>
+                  <p className="text-sm text-gray-600">Streamline workflows and eliminate bottlenecks</p>
+                </div>
+                <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
                   <TrendingUp className="h-12 w-12 text-ekam-primary mb-4" />
                   <h3 className="font-semibold text-gray-900 mb-2">Growth Acceleration</h3>
                   <p className="text-sm text-gray-600">Scale your business with intelligent automation</p>
