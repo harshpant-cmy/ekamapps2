@@ -1,10 +1,12 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Bot, Workflow, Zap } from "lucide-react";
+import { ExternalLink, Bot, Zap } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const agentsData = [
   {
+    id: "lead-enrichment",
     title: "Lead Enrichment Agent",
     description: "End-to-end automation: Scrapes leads from Apollo, extracts and verifies LinkedIn usernames and email addresses, and cleans raw data for downstream use.",
     features: ["Advanced email validation", "Profile & content insights", "Dynamic workflow handling", "Seamless integration"],
@@ -12,6 +14,7 @@ const agentsData = [
     color: "from-blue-500/10 to-blue-600/10"
   },
   {
+    id: "content-automation",
     title: "Content Automation Agent",
     description: "Automates the entire video production process, from script generation to final video output, using AI at each step.",
     features: ["AI script generation", "Text-to-speech voiceovers", "Dynamic visual storyboards", "Ready-to-publish videos"],
@@ -19,6 +22,7 @@ const agentsData = [
     color: "from-purple-500/10 to-purple-600/10"
   },
   {
+    id: "ecommerce-whatsapp",
     title: "E-Commerce WhatsApp Agent",
     description: "Connects Shopify with WhatsApp to automate order notifications, customer updates, and verification messages.",
     features: ["Order status workflows", "Automated product discovery", "Secure transaction validation", "Real-time status tracking"],
@@ -26,6 +30,7 @@ const agentsData = [
     color: "from-green-500/10 to-green-600/10"
   },
   {
+    id: "customer-support",
     title: "Customer Support Agent",
     description: "Receives and processes customer queries from webhooks or integrated chat channels using AI agents.",
     features: ["AI-powered classification", "Automated ticket creation", "Structured LLM responses", "Real-time status updates"],
@@ -33,6 +38,7 @@ const agentsData = [
     color: "from-orange-500/10 to-orange-600/10"
   },
   {
+    id: "sales-multichannel",
     title: "Sales Multi-Channel Agent",
     description: "Automates outbound sales and follow-up calls across multiple channels, including voice and WhatsApp.",
     features: ["Multi-channel automation", "Calendar integration", "AI-powered personalized calls", "Automated follow-ups"],
@@ -40,6 +46,7 @@ const agentsData = [
     color: "from-red-500/10 to-red-600/10"
   },
   {
+    id: "blog-posting",
     title: "Blog Posting Agent",
     description: "Generates high-quality blog content from topic ideas, outlines, or structured data using advanced AI models.",
     features: ["AI content generation", "Content revision workflows", "AI-driven image generation", "Direct publishing integration"],
@@ -47,6 +54,7 @@ const agentsData = [
     color: "from-indigo-500/10 to-indigo-600/10"
   },
   {
+    id: "travel-assistant",
     title: "Travel Assistant Agent",
     description: "Manages travel inquiries, lead capture, and bookings across WhatsApp, Facebook, and Instagram with a unified workflow.",
     features: ["Multi-platform management", "AI agent conversations", "Lead qualification", "Automated sales journey"],
@@ -54,6 +62,7 @@ const agentsData = [
     color: "from-teal-500/10 to-teal-600/10"
   },
   {
+    id: "instagram-intelligence",
     title: "Instagram Content Intelligence Agent",
     description: "Tracks and analyzes Instagram content for your brand or any competitor account, extracting insights on engagement, reach, and trending formats.",
     features: ["Content performance tracking", "Competitor analysis", "AI-powered insights", "Structured reporting"],
@@ -61,6 +70,7 @@ const agentsData = [
     color: "from-pink-500/10 to-pink-600/10"
   },
   {
+    id: "callassist-ai",
     title: "CallAssist AI Agent",
     description: "Automates the entire workflow for call transcription, information extraction, and actionable task generation.",
     features: ["Automated transcription", "Information extraction", "Task generation", "Zero manual documentation"],
@@ -68,6 +78,7 @@ const agentsData = [
     color: "from-yellow-500/10 to-yellow-600/10"
   },
   {
+    id: "legal-consultant",
     title: "Legal Consultant Agent",
     description: "Ingests and indexes legal documents from Google Drive, extracting summaries and key points using advanced AI models.",
     features: ["Document indexing", "Vector embeddings search", "Voice and text queries", "Citation-backed answers"],
@@ -134,10 +145,12 @@ const AIAgents = () => {
                   variant="outline" 
                   size="sm" 
                   className="w-full border-ekam-primary text-ekam-primary hover:bg-ekam-primary hover:text-white group" 
-                  onClick={() => window.open('https://calendly.com/nitin26gupta/callwithnitin?month=2025-05', '_blank')}
+                  asChild
                 >
-                  Learn More
-                  <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  <Link to={`/agent/${agent.id}`}>
+                    Learn More
+                    <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
                 </Button>
               </CardContent>
             </Card>
