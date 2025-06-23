@@ -114,10 +114,10 @@ const AIAgents = () => {
           {agentsData.map((agent, index) => {
             const IconComponent = agent.icon;
             return (
-              <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg overflow-hidden">
+              <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg overflow-hidden flex flex-col h-full">
                 <div className={`h-2 bg-gradient-to-r ${agent.color}`}></div>
                 
-                <CardHeader className="space-y-4">
+                <CardHeader className="space-y-4 flex-shrink-0">
                   <div className="flex items-center space-x-3">
                     <div className={`p-2 rounded-lg bg-gradient-to-r ${agent.color}`}>
                       <IconComponent className="h-6 w-6 text-ekam-primary" />
@@ -136,12 +136,12 @@ const AIAgents = () => {
                   </div>
                 </CardHeader>
 
-                <CardContent className="space-y-4">
+                <CardContent className="space-y-4 flex flex-col flex-grow">
                   <p className="text-gray-600 text-sm leading-relaxed">
                     {agent.description}
                   </p>
 
-                  <div className="space-y-2">
+                  <div className="space-y-2 flex-grow">
                     <h4 className="font-semibold text-gray-900 text-sm">Key Features:</h4>
                     <ul className="space-y-1">
                       {agent.features.map((feature, idx) => (
@@ -156,7 +156,7 @@ const AIAgents = () => {
                   <Button 
                     variant="outline" 
                     size="sm" 
-                    className="w-full border-ekam-primary text-ekam-primary hover:bg-ekam-primary hover:text-white group" 
+                    className="w-full border-ekam-primary text-ekam-primary hover:bg-ekam-primary hover:text-white group mt-auto" 
                     asChild
                   >
                     <Link to={`/agent/${agent.id}`}>
