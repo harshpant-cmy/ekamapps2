@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Bot, Zap, TrendingUp } from "lucide-react";
+import { ArrowRight, Bot, Clock, TrendingUp } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -12,10 +12,7 @@ const Hero = () => {
             <div className="space-y-4">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                 Transform Your{" "}
-                <span className="text-ekam-primary">Business</span> With{" "}
-                <span className="bg-gradient-to-r from-ekam-primary to-ekam-primary/80 bg-clip-text text-transparent">
-                  AI-Powered Automation
-                </span>
+                <span className="text-ekam-primary">Business</span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed">
                 We build intelligent AI solutions that simplify complexity, streamline processes, 
@@ -40,22 +37,6 @@ const Hero = () => {
                 Explore AI Agents
               </Button>
             </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-8 pt-8">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-ekam-primary">10+</div>
-                <div className="text-sm text-gray-600">AI Agents</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-ekam-primary">19+</div>
-                <div className="text-sm text-gray-600">Years Experience</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-ekam-primary">100%</div>
-                <div className="text-sm text-gray-600">Automation</div>
-              </div>
-            </div>
           </div>
 
           {/* Visual Element */}
@@ -68,9 +49,9 @@ const Hero = () => {
                   <p className="text-sm text-gray-600">AI agents that work 24/7</p>
                 </div>
                 <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                  <Zap className="h-12 w-12 text-ekam-primary mb-4" />
-                  <h3 className="font-semibold text-gray-900 mb-2">Lightning Fast</h3>
-                  <p className="text-sm text-gray-600">Instant process execution</p>
+                  <Clock className="h-12 w-12 text-ekam-primary mb-4" />
+                  <h3 className="font-semibold text-gray-900 mb-2">Save Time</h3>
+                  <p className="text-sm text-gray-600">Focus on creative tasks while AI handles routine work</p>
                 </div>
                 <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow col-span-2">
                   <TrendingUp className="h-12 w-12 text-ekam-primary mb-4" />
