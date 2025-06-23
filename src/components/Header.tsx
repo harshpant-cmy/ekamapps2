@@ -17,7 +17,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/dfb03ea5-aa2e-4225-b2ee-5646200da187.png" 
               alt="Ekam Logo" 
-              className="h-12 w-auto object-fill" 
+              className="h-30 w-auto object-fill" 
             />
           </div>
 
