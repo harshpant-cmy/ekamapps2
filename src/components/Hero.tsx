@@ -26,7 +26,7 @@ const Hero = () => {
                 className="bg-ekam-primary hover:bg-ekam-primary/90 text-white group"
                 onClick={() => window.open('https://calendly.com/nitin26gupta/callwithnitin?month=2025-05', '_blank')}
               >
-                Book Your Demo
+                Book Free Consultation
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button 

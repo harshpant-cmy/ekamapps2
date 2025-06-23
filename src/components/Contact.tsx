@@ -59,7 +59,7 @@ const Contact = () => {
                     <Calendar className="h-6 w-6 text-ekam-primary" />
                   </div>
                   <div>
-                    <p className="font-semibold text-gray-900">Schedule a Demo</p>
+                    <p className="font-semibold text-gray-900">Schedule a Free Consultation</p>
                     <p className="text-gray-600">Book a personalized consultation</p>
                   </div>
                 </div>
@@ -82,7 +82,7 @@ const Contact = () => {
             <Card className="bg-gradient-to-br from-ekam-primary to-ekam-primary/90 text-white">
               <CardContent className="p-8 text-center">
                 <Calendar className="h-16 w-16 mx-auto mb-6 opacity-80" />
-                <h3 className="text-2xl font-bold mb-4">Book Your Free Demo</h3>
+                <h3 className="text-2xl font-bold mb-4">Book Your Free Consultation</h3>
                 <p className="text-lg opacity-90 mb-6">
                   See how our AI agents can transform your business operations in just 30 minutes.
                 </p>
@@ -98,7 +98,7 @@ const Contact = () => {
                   className="w-full bg-white text-ekam-primary hover:bg-gray-100"
                   onClick={() => window.open('https://calendly.com/nitin26gupta/callwithnitin?month=2025-05', '_blank')}
                 >
-                  Schedule Free Demo
+                  Schedule Free Consultation
                 </Button>
               </CardContent>
             </Card>
