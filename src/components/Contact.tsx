@@ -1,11 +1,8 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, Calendar, MapPin } from "lucide-react";
-
 const Contact = () => {
-  return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-gray-50 to-ekam-secondary/20">
+  return <section id="contact" className="py-20 bg-gradient-to-br from-gray-50 to-ekam-secondary/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
@@ -30,10 +27,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">Email Us</p>
-                    <a 
-                      href="mailto:hello@ekamapps.com" 
-                      className="text-ekam-primary hover:text-ekam-primary/80 transition-colors"
-                    >
+                    <a href="mailto:hello@ekamapps.com" className="text-ekam-primary hover:text-ekam-primary/80 transition-colors">
                       hello@ekamapps.com
                     </a>
                   </div>
@@ -45,10 +39,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">Call Us</p>
-                    <a 
-                      href="tel:+919971117162" 
-                      className="text-ekam-primary hover:text-ekam-primary/80 transition-colors"
-                    >
+                    <a href="tel:+919971117162" className="text-ekam-primary hover:text-ekam-primary/80 transition-colors">
                       +91 99711 17162
                     </a>
                   </div>
@@ -80,7 +71,7 @@ const Contact = () => {
           {/* CTA Card */}
           <div className="space-y-8">
             <Card className="bg-gradient-to-br from-ekam-primary to-ekam-primary/90 text-white">
-              <CardContent className="p-8 text-center">
+              <CardContent className="p-8 text-center px-[10px] py-[10px]">
                 <Calendar className="h-16 w-16 mx-auto mb-6 opacity-80" />
                 <h3 className="text-2xl font-bold mb-4">Book Your Free Consultation</h3>
                 <p className="text-lg opacity-90 mb-6">
@@ -88,16 +79,11 @@ const Contact = () => {
                 </p>
                 <ul className="text-left space-y-2 mb-8 opacity-90">
                   <li>✓ Personalized AI solution walkthrough</li>
-                  <li>✓ Custom workflow demonstration</li>
+                  <li>✓ Custom workflow demonstratio</li>
                   <li>✓ ROI analysis for your business</li>
                   <li>✓ Implementation timeline discussion</li>
                 </ul>
-                <Button 
-                  size="lg" 
-                  variant="secondary"
-                  className="w-full bg-white text-ekam-primary hover:bg-gray-100"
-                  onClick={() => window.open('https://calendly.com/nitin26gupta/callwithnitin?month=2025-05', '_blank')}
-                >
+                <Button size="lg" variant="secondary" className="w-full bg-white text-ekam-primary hover:bg-gray-100" onClick={() => window.open('https://calendly.com/nitin26gupta/callwithnitin?month=2025-05', '_blank')}>
                   Schedule Free Consultation
                 </Button>
               </CardContent>
@@ -129,8 +115,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
