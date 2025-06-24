@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,13 +15,13 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="/" className="block">
+            <Link to="/" className="block">
               <img 
                 src="/lovable-uploads/dfb03ea5-aa2e-4225-b2ee-5646200da187.png" 
                 alt="Ekam Logo" 
                 className="h-36 w-auto object-fill hover:opacity-80 transition-opacity cursor-pointer" 
               />
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
