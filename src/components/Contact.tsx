@@ -1,8 +1,11 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, Calendar, MapPin, Award, Users, Target, Building, Clock, Shield, Zap, TrendingUp } from "lucide-react";
+
 const Contact = () => {
-  return <section id="contact" className="py-16 bg-gradient-to-br from-gray-50 to-ekam-secondary/20">
+  return (
+    <section id="contact" className="py-16 bg-gradient-to-br from-gray-50 to-ekam-secondary/20">
       <div className="max-w-7xl mx-auto px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
@@ -123,47 +126,51 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Enhanced CTA Section */}
+        {/* Enhanced CTA Section - Now Mobile Friendly */}
         <Card className="bg-gradient-to-r from-ekam-primary via-ekam-primary/95 to-ekam-primary/90 text-white shadow-2xl overflow-hidden relative">
-          <CardContent className="p-12 text-center relative z-10 bg-[#013a37]">
+          <CardContent className="p-6 sm:p-8 lg:p-12 text-center relative z-10 bg-[#013a37]">
             <div className="max-w-4xl mx-auto">
-              <Calendar className="h-20 w-20 mx-auto mb-8 opacity-90" />
-              <h3 className="text-4xl font-bold mb-6">Book Your Free Consultation</h3>
-              <p className="text-xl opacity-95 mb-8 leading-relaxed">
+              <Calendar className="h-16 w-16 sm:h-20 sm:w-20 mx-auto mb-6 sm:mb-8 opacity-90" />
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">Book Your Free Consultation</h3>
+              <p className="text-lg sm:text-xl opacity-95 mb-6 sm:mb-8 leading-relaxed px-4">
                 See how our AI agents can transform your business operations in just 30 minutes.
               </p>
               
-              <div className="grid md:grid-cols-2 gap-6 mb-10 text-lg">
-                <div className="space-y-3 text-left">
-                  <div className="flex items-center justify-start space-x-3">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                    <span>Personalized AI solution walkthrough</span>
-                  </div>
-                  <div className="flex items-center justify-start space-x-3">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                    <span>Custom workflow demonstration</span>
-                  </div>
+              {/* Mobile-first responsive bullet points */}
+              <div className="space-y-3 sm:space-y-4 mb-8 sm:mb-10 text-base sm:text-lg">
+                <div className="flex items-start space-x-3 text-left">
+                  <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+                  <span>Personalized AI solution walkthrough</span>
                 </div>
-                <div className="space-y-3 text-right">
-                  <div className="flex items-center justify-end space-x-3">
-                    <span>ROI analysis for your business</span>
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                  </div>
-                  <div className="flex items-center justify-end space-x-3">
-                    <span>Implementation timeline discussion</span>
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                  </div>
+                <div className="flex items-start space-x-3 text-left">
+                  <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+                  <span>Custom workflow demonstration</span>
+                </div>
+                <div className="flex items-start space-x-3 text-left">
+                  <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+                  <span>ROI analysis for your business</span>
+                </div>
+                <div className="flex items-start space-x-3 text-left">
+                  <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+                  <span>Implementation timeline discussion</span>
                 </div>
               </div>
               
-              <Button size="lg" variant="secondary" className="bg-white text-ekam-primary hover:bg-gray-100 font-bold text-xl py-6 px-12 shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 rounded-full" onClick={() => window.open('https://calendly.com/nitin26gupta/callwithnitin?month=2025-05', '_blank')}>
-                <Calendar className="mr-3 h-6 w-6" />
+              <Button 
+                size="lg" 
+                variant="secondary" 
+                className="w-full sm:w-auto bg-white text-ekam-primary hover:bg-gray-100 font-bold text-lg sm:text-xl py-4 sm:py-6 px-6 sm:px-12 shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 rounded-full" 
+                onClick={() => window.open('https://calendly.com/nitin26gupta/callwithnitin?month=2025-05', '_blank')}
+              >
+                <Calendar className="mr-2 sm:mr-3 h-5 w-5 sm:h-6 sm:w-6" />
                 Schedule Free Consultation
               </Button>
             </div>
           </CardContent>
         </Card>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Contact;
