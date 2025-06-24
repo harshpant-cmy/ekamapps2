@@ -257,7 +257,7 @@ const AgentPage = () => {
     return (
       <div className="min-h-screen bg-gray-50">
         <Header />
-        <div className="max-w-7xl mx-auto px-8 py-20 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
           <h1 className="text-2xl font-bold text-gray-900 mb-4">Agent Not Found</h1>
           <Link to="/" className="text-ekam-primary hover:underline">
             Return to Home
@@ -272,27 +272,27 @@ const AgentPage = () => {
     <div className="min-h-screen bg-gray-50">
       <Header />
       
-      <div className="max-w-7xl mx-auto px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
         {/* Back Button */}
-        <Link to="/" className="inline-flex items-center text-ekam-primary hover:text-ekam-primary/80 mb-6 transition-colors">
+        <Link to="/" className="inline-flex items-center text-ekam-primary hover:text-ekam-primary/80 mb-4 sm:mb-6 transition-colors">
           <ArrowLeft className="h-4 w-4 mr-2" />
           Back to AI Agents
         </Link>
 
         {/* Header Section */}
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+        <div className="mb-6 sm:mb-8">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 leading-tight">
             {agent.title}
           </h1>
-          <p className="text-xl text-gray-600 leading-relaxed mb-6">
+          <p className="text-lg sm:text-xl text-gray-600 leading-relaxed mb-4 sm:mb-6">
             {agent.description}
           </p>
           
           {/* Highlighted Workflow Image */}
-          <Card className="border-0 shadow-xl overflow-hidden mb-8">
-            <div className={`h-3 bg-gradient-to-r ${agent.color}`}></div>
-            <CardContent className="p-8">
-              <div className="aspect-video bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl overflow-hidden shadow-inner">
+          <Card className="border-0 shadow-xl overflow-hidden mb-6 sm:mb-8">
+            <div className={`h-2 sm:h-3 bg-gradient-to-r ${agent.color}`}></div>
+            <CardContent className="p-4 sm:p-6 lg:p-8">
+              <div className="aspect-video bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg sm:rounded-xl overflow-hidden shadow-inner">
                 <img src={agent.image} alt={`${agent.title} workflow`} className="w-full h-full object-contain hover:scale-105 transition-transform duration-300" />
               </div>
             </CardContent>
@@ -300,23 +300,23 @@ const AgentPage = () => {
         </div>
 
         {/* Features Section */}
-        <Card className="border-0 shadow-lg mb-8">
-          <CardHeader className="pb-4">
-            <CardTitle className="flex items-center text-2xl">
-              <Star className="h-7 w-7 text-ekam-primary mr-3" />
-              Key Features & Capabilities
+        <Card className="border-0 shadow-lg mb-6 sm:mb-8">
+          <CardHeader className="pb-3 sm:pb-4 px-4 sm:px-6">
+            <CardTitle className="flex items-center text-xl sm:text-2xl">
+              <Star className="h-6 w-6 sm:h-7 sm:w-7 text-ekam-primary mr-2 sm:mr-3 flex-shrink-0" />
+              <span className="leading-tight">Key Features & Capabilities</span>
             </CardTitle>
           </CardHeader>
-          <CardContent className="pt-0">
-            <div className="grid lg:grid-cols-2 gap-6">
+          <CardContent className="pt-0 px-4 sm:px-6">
+            <div className="grid gap-4 sm:gap-6 lg:grid-cols-2">
               {agent.features.map((feature, index) => (
-                <div key={index} className="flex items-start space-x-4 p-4 rounded-lg bg-gray-50/50 hover:bg-gray-100/50 transition-colors">
-                  <div className={`p-3 rounded-lg bg-gradient-to-r ${agent.color} flex-shrink-0`}>
-                    <feature.icon className="h-6 w-6 text-ekam-primary" />
+                <div key={index} className="flex items-start space-x-3 sm:space-x-4 p-3 sm:p-4 rounded-lg bg-gray-50/50 hover:bg-gray-100/50 transition-colors">
+                  <div className={`p-2 sm:p-3 rounded-lg bg-gradient-to-r ${agent.color} flex-shrink-0`}>
+                    <feature.icon className="h-5 w-5 sm:h-6 sm:w-6 text-ekam-primary" />
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">{feature.title}</h4>
-                    <p className="text-sm text-gray-600 leading-relaxed">{feature.description}</p>
+                  <div className="min-w-0 flex-1">
+                    <h4 className="font-semibold text-gray-900 mb-1 sm:mb-2 text-sm sm:text-base leading-tight">{feature.title}</h4>
+                    <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{feature.description}</p>
                   </div>
                 </div>
               ))}
@@ -325,19 +325,19 @@ const AgentPage = () => {
         </Card>
 
         {/* Benefits Section */}
-        <Card className="border-0 shadow-lg mb-8">
-          <CardHeader className="pb-4">
-            <CardTitle className="flex items-center text-2xl">
-              <TrendingUp className="h-7 w-7 text-ekam-primary mr-3" />
-              Business Benefits & Impact
+        <Card className="border-0 shadow-lg mb-6 sm:mb-8">
+          <CardHeader className="pb-3 sm:pb-4 px-4 sm:px-6">
+            <CardTitle className="flex items-center text-xl sm:text-2xl">
+              <TrendingUp className="h-6 w-6 sm:h-7 sm:w-7 text-ekam-primary mr-2 sm:mr-3 flex-shrink-0" />
+              <span className="leading-tight">Business Benefits & Impact</span>
             </CardTitle>
           </CardHeader>
-          <CardContent className="pt-0">
-            <div className="grid lg:grid-cols-2 gap-4">
+          <CardContent className="pt-0 px-4 sm:px-6">
+            <div className="grid gap-3 sm:gap-4 lg:grid-cols-2">
               {agent.benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50/50 transition-colors">
-                  <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700 leading-relaxed">{benefit}</span>
+                <div key={index} className="flex items-start space-x-3 p-2 sm:p-3 rounded-lg hover:bg-gray-50/50 transition-colors">
+                  <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span className="text-sm sm:text-base text-gray-700 leading-relaxed">{benefit}</span>
                 </div>
               ))}
             </div>
@@ -345,30 +345,39 @@ const AgentPage = () => {
         </Card>
 
         {/* CTA Section */}
-        <div className="grid xl:grid-cols-2 gap-6">
+        <div className="grid gap-4 sm:gap-6 xl:grid-cols-2">
           <Card className="border-0 shadow-lg bg-gradient-to-r from-ekam-primary to-ekam-primary/90 text-white bg-[#013a37]">
-            <CardContent className="p-8 text-center">
-              <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Business?</h3>
-              <p className="text-lg opacity-95 mb-6 leading-relaxed">
+            <CardContent className="p-6 sm:p-8 text-center">
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 leading-tight">Ready to Transform Your Business?</h3>
+              <p className="text-base sm:text-lg opacity-95 mb-4 sm:mb-6 leading-relaxed">
                 Let's discuss how this AI agent can streamline your operations, boost productivity, and drive measurable results for your business.
               </p>
-              <Button size="lg" className="w-full bg-white text-ekam-primary hover:bg-gray-100 font-semibold" onClick={() => window.open('https://calendly.com/nitin26gupta/callwithnitin?month=2025-06', '_blank')}>
-                <Calendar className="h-5 w-5 mr-2" />
-                Schedule Your Free Consultation
+              <Button 
+                size="lg" 
+                className="w-full bg-white text-ekam-primary hover:bg-gray-100 font-semibold py-3 sm:py-4 px-4 sm:px-6 text-sm sm:text-base" 
+                onClick={() => window.open('https://calendly.com/nitin26gupta/callwithnitin?month=2025-06', '_blank')}
+              >
+                <Calendar className="h-4 w-4 sm:h-5 sm:w-5 mr-2 flex-shrink-0" />
+                <span className="whitespace-nowrap">Schedule Your Free Consultation</span>
               </Button>
             </CardContent>
           </Card>
 
           <Card className="border-0 shadow-lg">
-            <CardContent className="p-8 text-center">
-              <div className="mb-6">
-                <Users className="h-12 w-12 text-ekam-primary mx-auto mb-4" />
-                <h4 className="text-xl font-semibold text-gray-900 mb-2">Limited Time Offer</h4>
-                <p className="text-gray-600 leading-relaxed">
+            <CardContent className="p-6 sm:p-8 text-center">
+              <div className="mb-4 sm:mb-6">
+                <Users className="h-10 w-10 sm:h-12 sm:w-12 text-ekam-primary mx-auto mb-3 sm:mb-4" />
+                <h4 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 leading-tight">Limited Time Offer</h4>
+                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                   Get a comprehensive consultation including custom implementation strategy, ROI analysis, and integration roadmap tailored to your specific business needs.
                 </p>
               </div>
-              <Button variant="outline" size="lg" className="w-full border-2 border-ekam-primary text-ekam-primary hover:bg-ekam-primary hover:text-white font-semibold" onClick={() => window.open('https://calendly.com/nitin26gupta/callwithnitin?month=2025-06', '_blank')}>
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="w-full border-2 border-ekam-primary text-ekam-primary hover:bg-ekam-primary hover:text-white font-semibold py-3 sm:py-4 px-4 sm:px-6 text-sm sm:text-base" 
+                onClick={() => window.open('https://calendly.com/nitin26gupta/callwithnitin?month=2025-06', '_blank')}
+              >
                 Book Your Strategy Session
               </Button>
             </CardContent>
