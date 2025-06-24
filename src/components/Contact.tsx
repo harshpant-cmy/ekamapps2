@@ -137,19 +137,19 @@ const Contact = () => {
               <div className="space-y-3 sm:space-y-4 mb-8 sm:mb-10 text-base sm:text-lg">
                 <div className="flex items-start space-x-3 text-left">
                   <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-                  <span>Personalized AI solution walkthrough</span>
+                  <span className="text-lg">Personalized AI solution walkthrough</span>
                 </div>
                 <div className="flex items-start space-x-3 text-left">
                   <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-                  <span>Custom workflow demonstration</span>
+                  <span className="text-lg">Custom workflow demonstration</span>
                 </div>
                 <div className="flex items-start space-x-3 text-left">
                   <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-                  <span>ROI analysis for your business</span>
+                  <span className="text-left text-lg">ROI analysis for your business</span>
                 </div>
                 <div className="flex items-start space-x-3 text-left">
                   <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-                  <span>Implementation timeline discussion</span>
+                  <span className="text-lg">Implementation timeline discussion</span>
                 </div>
               </div>
               
