@@ -1,8 +1,10 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, Calendar, MapPin, Award, Users, Target, Building, Clock, Shield, Zap, TrendingUp } from "lucide-react";
+
 const Contact = () => {
-  return <section id="contact" className="py-16 bg-gradient-to-br from-gray-50 to-ekam-secondary/20">
+  return (
+    <section id="contact" className="py-16 bg-gradient-to-br from-gray-50 to-ekam-secondary/20">
       <div className="max-w-7xl mx-auto px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
@@ -123,7 +125,7 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Enhanced CTA Section - Now Mobile Friendly */}
+        {/* Enhanced CTA Section - Fixed Mobile Button */}
         <Card className="bg-gradient-to-r from-ekam-primary via-ekam-primary/95 to-ekam-primary/90 text-white shadow-2xl overflow-hidden relative">
           <CardContent className="p-6 sm:p-8 lg:p-12 text-center relative z-10 bg-[#013a37]">
             <div className="max-w-4xl mx-auto">
@@ -153,14 +155,21 @@ const Contact = () => {
                 </div>
               </div>
               
-              <Button size="lg" variant="secondary" onClick={() => window.open('https://calendly.com/nitin26gupta/callwithnitin?month=2025-05', '_blank')} className="w-full sm:w-auto bg-white text-ekam-primary hover:bg-gray-100 font-bold sm:text-xl py-4 sm:py-6 px-6 sm:px-12 shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 rounded-full text-center text-lg">
-                <Calendar className="mr-2 sm:mr-3 h-5 w-5 sm:h-6 sm:w-6" />
-                Schedule Free Consultation
+              <Button 
+                size="lg" 
+                variant="secondary" 
+                onClick={() => window.open('https://calendly.com/nitin26gupta/callwithnitin?month=2025-05', '_blank')} 
+                className="w-full bg-white text-ekam-primary hover:bg-gray-100 font-bold text-base sm:text-lg lg:text-xl py-4 sm:py-6 px-4 sm:px-8 lg:px-12 shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 rounded-full min-h-[56px] flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 leading-tight"
+              >
+                <Calendar className="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0" />
+                <span className="whitespace-nowrap text-center">Schedule Free Consultation</span>
               </Button>
             </div>
           </CardContent>
         </Card>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Contact;
