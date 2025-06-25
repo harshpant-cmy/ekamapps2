@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import AIAgents from "@/components/AIAgents";
 import Contact from "@/components/Contact";
+import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -14,6 +15,7 @@ const Index = () => {
       <About />
       <AIAgents />
       <Contact />
+      <FAQ />
       <Footer />
     </div>
   );
