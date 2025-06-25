@@ -1,63 +1,89 @@
 
 import React from 'react';
+import { ArrowRight } from 'lucide-react';
 
 const Process = () => {
   const steps = [
     {
-      step: "Step 1",
-      title: "AI Strategy Consultation:",
-      description: "We identify business challenges and align AI solutions with your vision.",
-      stepColor: "bg-yellow-400"
+      number: "1",
+      title: "AI Strategy Consultation",
+      description: "We identify business challenges and align AI solutions with your vision."
     },
     {
-      step: "Step 2", 
-      title: "Custom AI Development:",
-      description: "We build AI models for automation, decision-making, and customer interactions.",
-      stepColor: "bg-purple-400"
+      number: "2", 
+      title: "Custom AI Development",
+      description: "We build AI models for automation, decision-making, and customer interactions."
     },
     {
-      step: "Step 3",
-      title: "Seamless Integration:",
-      description: "We deploy AI into existing workflows for immediate efficiency gains.",
-      stepColor: "bg-yellow-400"
+      number: "3",
+      title: "Seamless Integration",
+      description: "We deploy AI into existing workflows for immediate efficiency gains."
     },
     {
-      step: "Step 4",
-      title: "Continuous Optimization & Scaling:",
-      description: "We monitor and expand AI capabilities to keep you competitive.",
-      stepColor: "bg-purple-400"
+      number: "4",
+      title: "Continuous Optimization & Scaling",
+      description: "We monitor and expand AI capabilities to keep you competitive."
     }
   ];
 
   return (
-    <section className="py-16 bg-gray-900 text-white">
-      <div className="max-w-6xl mx-auto px-8">
+    <section className="py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-            Our <span className="text-yellow-400">Process</span> For <span className="text-yellow-400">AI Success</span>
+          <h2 className="text-4xl sm:text-5xl font-bold text-ekam-primary mb-4">
+            Our Process For AI Success
           </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            A proven methodology to transform your business with intelligent automation
+          </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
           {steps.map((step, index) => (
             <div key={index} className="relative">
-              <div className="flex items-start space-x-6">
-                <div className="flex-shrink-0">
-                  <div className={`${step.stepColor} text-gray-900 font-bold px-4 py-2 rounded-full text-lg min-w-[100px] text-center`}>
-                    {step.step}
+              {/* Step card */}
+              <div className="bg-white border-2 border-ekam-secondary rounded-lg p-6 h-full hover:shadow-lg transition-shadow duration-300">
+                {/* Step number circle */}
+                <div className="flex justify-center mb-4">
+                  <div className="w-12 h-12 bg-ekam-primary text-white font-bold text-xl rounded-full flex items-center justify-center">
+                    {step.number}
                   </div>
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-xl font-semibold mb-3 text-white">
+                
+                {/* Step content */}
+                <div className="text-center">
+                  <h3 className="text-lg font-semibold text-ekam-primary mb-3">
                     {step.title}
                   </h3>
-                  <p className="text-gray-300 text-lg leading-relaxed">
+                  <p className="text-gray-600 text-sm leading-relaxed">
                     {step.description}
                   </p>
                 </div>
               </div>
+
+              {/* Arrow connector (hidden on last item and mobile) */}
+              {index < steps.length - 1 && (
+                <div className="hidden lg:block absolute top-1/2 -right-3 transform -translate-y-1/2 z-10">
+                  <div className="bg-white rounded-full p-2 border-2 border-ekam-secondary">
+                    <ArrowRight className="w-4 h-4 text-ekam-primary" />
+                  </div>
+                </div>
+              )}
             </div>
           ))}
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="text-center mt-16">
+          <p className="text-lg text-gray-600 mb-6">
+            Ready to start your AI transformation journey?
+          </p>
+          <button 
+            className="bg-ekam-primary hover:bg-ekam-primary/90 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+            onClick={() => window.open('https://calendly.com/nitin26gupta/callwithnitin?month=2025-06', '_blank')}
+          >
+            Schedule Your Free Consultation
+          </button>
         </div>
       </div>
     </section>
