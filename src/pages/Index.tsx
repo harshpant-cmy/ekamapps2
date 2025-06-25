@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import AIAgents from "@/components/AIAgents";
+import TechStack from "@/components/TechStack";
 import Process from "@/components/Process";
 import Contact from "@/components/Contact";
 import FAQ from "@/components/FAQ";
@@ -15,6 +16,7 @@ const Index = () => {
       <Hero />
       <About />
       <AIAgents />
+      <TechStack />
       <Process />
       <Contact />
       <FAQ />
