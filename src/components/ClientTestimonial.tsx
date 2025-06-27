@@ -52,7 +52,7 @@ const ClientTestimonial = () => {
                   Custom API Integration for App Sumo
                 </h3>
                 <p className="text-sm text-gray-600">
-                  Streamlining Workflow with n8n
+                  Finding relevant product information through AI Agents
                 </p>
               </div>
               
