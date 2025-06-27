@@ -1,10 +1,7 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Play } from "lucide-react";
-
 const ClientTestimonial = () => {
-  return (
-    <section className="py-16 bg-gray-50">
+  return <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-12">
           <div className="flex items-center justify-center mb-3 sm:mb-4">
@@ -23,23 +20,14 @@ const ClientTestimonial = () => {
           <Card className="border-0 shadow-xl bg-gradient-to-r from-blue-50 to-purple-50">
             <CardContent className="p-4 sm:p-6">
               <div className="text-center mb-4">
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">
-                  AI Automation Success
-                </h3>
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">AI Social Media Automation Success</h3>
                 <p className="text-sm text-gray-600">
                   How we transformed their business processes
                 </p>
               </div>
               
               <div className="aspect-video rounded-lg sm:rounded-xl overflow-hidden shadow-lg">
-                <iframe
-                  className="w-full h-full"
-                  src="https://www.youtube.com/embed/6gp2a6llZYM"
-                  title="Client Testimonial - AI Automation Success"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                ></iframe>
+                <iframe className="w-full h-full" src="https://www.youtube.com/embed/6gp2a6llZYM" title="Client Testimonial - AI Automation Success" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
               </div>
             </CardContent>
           </Card>
@@ -57,21 +45,12 @@ const ClientTestimonial = () => {
               </div>
               
               <div className="aspect-video rounded-lg sm:rounded-xl overflow-hidden shadow-lg">
-                <iframe
-                  className="w-full h-full"
-                  src="https://www.youtube.com/embed/jM_dnvqkad8"
-                  title="Custom API Integration for App Sumo: Streamlining Workflow with n8n | Client Success Story"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                ></iframe>
+                <iframe className="w-full h-full" src="https://www.youtube.com/embed/jM_dnvqkad8" title="Custom API Integration for App Sumo: Streamlining Workflow with n8n | Client Success Story" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
               </div>
             </CardContent>
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ClientTestimonial;
