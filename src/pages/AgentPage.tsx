@@ -2,7 +2,7 @@
 import { useParams, Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, CheckCircle, Star, Calendar, Shield, Zap, Target, TrendingUp, Clock, Users, BarChart3, Globe, MessageSquare, Settings, Eye, Headphones, FileText, Search } from "lucide-react";
+import { ArrowLeft, CheckCircle, Star, Calendar, Shield, Zap, Target, TrendingUp, Clock, Users, BarChart3, Globe, MessageSquare, Settings, Eye, Headphones, FileText, Search, Play } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -278,6 +278,36 @@ const AgentPage = () => {
           <ArrowLeft className="h-4 w-4 mr-2" />
           Back to AI Agents
         </Link>
+
+        {/* Client Testimonial Video - Only for content-automation */}
+        {agentId === 'content-automation' && (
+          <Card className="border-0 shadow-xl mb-6 sm:mb-8 bg-gradient-to-r from-purple-50 to-indigo-50">
+            <CardContent className="p-4 sm:p-6 lg:p-8">
+              <div className="text-center mb-4 sm:mb-6">
+                <div className="flex items-center justify-center mb-2 sm:mb-3">
+                  <Play className="h-6 w-6 sm:h-8 sm:w-8 text-purple-600 mr-2 sm:mr-3" />
+                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">
+                    Client Success Story
+                  </h3>
+                </div>
+                <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto">
+                  See how our Content Automation Agent transformed this client's video production workflow
+                </p>
+              </div>
+              
+              <div className="aspect-video max-w-4xl mx-auto rounded-lg sm:rounded-xl overflow-hidden shadow-lg">
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/6gp2a6llZYM"
+                  title="Client Testimonial - Content Automation Agent"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </CardContent>
+          </Card>
+        )}
 
         {/* Header Section */}
         <div className="mb-6 sm:mb-8">
