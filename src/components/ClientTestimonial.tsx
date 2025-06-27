@@ -36,9 +36,7 @@ const ClientTestimonial = () => {
           <Card className="border-0 shadow-xl bg-gradient-to-r from-purple-50 to-pink-50">
             <CardContent className="p-4 sm:p-6">
               <div className="text-center mb-4">
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">
-                  Custom API Integration for App Sumo
-                </h3>
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">Find relevant product information through AI Agents</h3>
                 <p className="text-sm text-gray-600">
                   Finding relevant product information through AI Agents
                 </p>
