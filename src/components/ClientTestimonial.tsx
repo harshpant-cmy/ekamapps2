@@ -37,9 +37,7 @@ const ClientTestimonial = () => {
             <CardContent className="p-4 sm:p-6">
               <div className="text-center mb-4">
                 <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">Find relevant product information through AI Agents</h3>
-                <p className="text-sm text-gray-600">
-                  Finding relevant product information through AI Agents
-                </p>
+                <p className="text-sm text-gray-600">Custom API Integration</p>
               </div>
               
               <div className="aspect-video rounded-lg sm:rounded-xl overflow-hidden shadow-lg">
