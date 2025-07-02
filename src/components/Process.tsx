@@ -80,7 +80,7 @@ const Process = () => {
           </p>
           <button 
             className="bg-ekam-primary hover:bg-ekam-primary/90 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-            onClick={() => window.open('https://calendly.com/nitin26gupta/callwithnitin?month=2025-06', '_blank')}
+            onClick={() => window.open('https://calendar.app.google/p5iQtkxptFhS75GW8', '_blank')}
           >
             Schedule Your Free Consultation
           </button>

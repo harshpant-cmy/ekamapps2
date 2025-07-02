@@ -40,7 +40,7 @@ const Hero = () => {
               size="lg" 
               variant="outline" 
               className="border-gray-300 text-gray-700 hover:bg-gray-50 px-8"
-              onClick={() => window.open('https://calendly.com/nitin26gupta/callwithnitin?month=2025-06', '_blank')}
+              onClick={() => window.open('https://calendar.app.google/p5iQtkxptFhS75GW8', '_blank')}
             >
               Book a Consultation
             </Button>

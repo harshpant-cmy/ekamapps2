@@ -62,7 +62,7 @@ const Footer = () => {
             <p className="text-sm text-ekam-secondary/80">
               Ready to transform your business with AI?
             </p>
-            <a href="https://calendly.com/nitin26gupta/callwithnitin?month=2025-06" target="_blank" rel="noopener noreferrer" className="inline-flex items-center space-x-2 bg-ekam-secondary text-ekam-primary px-4 py-2 rounded-lg text-sm font-medium hover:bg-ekam-secondary/90 transition-colors">
+            <a href="https://calendar.app.google/p5iQtkxptFhS75GW8" target="_blank" rel="noopener noreferrer" className="inline-flex items-center space-x-2 bg-ekam-secondary text-ekam-primary px-4 py-2 rounded-lg text-sm font-medium hover:bg-ekam-secondary/90 transition-colors">
               <span>Free Consultation</span>
               <ExternalLink className="h-4 w-4" />
             </a>

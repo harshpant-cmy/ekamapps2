@@ -158,7 +158,7 @@ const Contact = () => {
               <Button 
                 size="lg" 
                 variant="secondary" 
-                onClick={() => window.open('https://calendly.com/nitin26gupta/callwithnitin?month=2025-05', '_blank')} 
+                onClick={() => window.open('https://calendar.app.google/p5iQtkxptFhS75GW8', '_blank')} 
                 className="w-full bg-white text-ekam-primary hover:bg-gray-100 font-bold text-base sm:text-lg lg:text-xl py-4 sm:py-6 px-4 sm:px-8 lg:px-12 shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 rounded-full min-h-[56px] flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 leading-tight"
               >
                 <Calendar className="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0" />
