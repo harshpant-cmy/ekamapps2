@@ -69,11 +69,6 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-ekam-secondary/20 mt-8 pt-8 text-center">
-          <p className="text-sm text-ekam-secondary/60">
-            © 2025 Ekam. All rights reserved. | Built with ❤️ for businesses ready to embrace AI
-          </p>
-        </div>
       </div>
     </footer>
   );
