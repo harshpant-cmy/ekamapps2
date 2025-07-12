@@ -15,7 +15,7 @@ const ClientTestimonial = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
           {/* First Video - AI Automation Success */}
           <Card className="border-0 shadow-xl bg-gradient-to-r from-blue-50 to-purple-50">
             <CardContent className="p-4 sm:p-6">
@@ -42,6 +42,22 @@ const ClientTestimonial = () => {
               
               <div className="aspect-video rounded-lg sm:rounded-xl overflow-hidden shadow-lg">
                 <iframe className="w-full h-full" src="https://www.youtube.com/embed/jM_dnvqkad8" title="Custom API Integration for App Sumo: Streamlining Workflow with n8n | Client Success Story" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Third Video - YouTube Shorts Testimonial */}
+          <Card className="border-0 shadow-xl bg-gradient-to-r from-green-50 to-blue-50">
+            <CardContent className="p-4 sm:p-6">
+              <div className="text-center mb-4">
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">Client Success Story</h3>
+                <p className="text-sm text-gray-600">
+                  Real feedback from our satisfied client
+                </p>
+              </div>
+              
+              <div className="aspect-[9/16] rounded-lg sm:rounded-xl overflow-hidden shadow-lg mx-auto max-w-xs">
+                <iframe className="w-full h-full" src="https://www.youtube.com/embed/GLIlGCIz0w4" title="Client Testimonial - Success Story" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
               </div>
             </CardContent>
           </Card>
