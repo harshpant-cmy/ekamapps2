@@ -69,10 +69,20 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-ekam-secondary/20 mt-8 pt-8 text-center">
-          <p className="text-sm text-ekam-secondary/60">
-            © 2025 Ekam. All rights reserved.
-          </p>
+        <div className="border-t border-ekam-secondary/20 mt-8 pt-8">
+          <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+            <p className="text-sm text-ekam-secondary/60">
+              © 2025 Ekam. All rights reserved.
+            </p>
+            <div className="flex space-x-6 text-sm">
+              <a href="/privacy-policy" className="text-ekam-secondary/80 hover:text-ekam-secondary transition-colors">
+                Privacy Policy
+              </a>
+              <a href="/terms-conditions" className="text-ekam-secondary/80 hover:text-ekam-secondary transition-colors">
+                Terms & Conditions
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
