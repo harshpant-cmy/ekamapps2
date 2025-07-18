@@ -56,7 +56,7 @@ const ClientTestimonial = () => {
                 </p>
               </div>
               
-              <div className="aspect-[9/16] rounded-lg sm:rounded-xl overflow-hidden shadow-lg mx-auto max-w-xs">
+              <div className="aspect-video rounded-lg sm:rounded-xl overflow-hidden shadow-lg">
                 <iframe className="w-full h-full" src="https://www.youtube.com/embed/3BwP6GI7000" title="Client Testimonial - Success Story" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
               </div>
             </CardContent>
