@@ -38,6 +38,9 @@ const Header = () => {
             <a href="/#agents" className="text-gray-700 hover:text-ekam-primary transition-colors">
               AI Agents
             </a>
+            <Link to="/blog" className="text-gray-700 hover:text-ekam-primary transition-colors">
+              Blog
+            </Link>
             <a href="/#contact" className="text-gray-700 hover:text-ekam-primary transition-colors">
               Contact
             </a>
@@ -68,6 +71,9 @@ const Header = () => {
               <a href="/#agents" className="text-gray-700 hover:text-ekam-primary transition-colors" onClick={toggleMenu}>
                 AI Agents
               </a>
+              <Link to="/blog" className="text-gray-700 hover:text-ekam-primary transition-colors" onClick={toggleMenu}>
+                Blog
+              </Link>
               <a href="/#contact" className="text-gray-700 hover:text-ekam-primary transition-colors" onClick={toggleMenu}>
                 Contact
               </a>
