@@ -44,6 +44,14 @@ const Header = () => {
             <a href="/#contact" className="text-gray-700 hover:text-ekam-primary transition-colors">
               Contact
             </a>
+            <a 
+              href="https://intelliflo.ai" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-gray-700 hover:text-ekam-primary transition-colors"
+            >
+              Intelliflo
+            </a>
             <Button 
               className="bg-ekam-primary hover:bg-ekam-primary/90 text-white"
               onClick={() => window.open('https://calendly.com/nitin26gupta/callwithnitin?month=2025-06', '_blank')}
@@ -76,6 +84,15 @@ const Header = () => {
               </Link>
               <a href="/#contact" className="text-gray-700 hover:text-ekam-primary transition-colors" onClick={toggleMenu}>
                 Contact
+              </a>
+              <a 
+                href="https://intelliflo.ai" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-700 hover:text-ekam-primary transition-colors" 
+                onClick={toggleMenu}
+              >
+                Intelliflo
               </a>
               <Button 
                 className="bg-ekam-primary hover:bg-ekam-primary/90 text-white w-fit"
