@@ -1,68 +1,130 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Play } from "lucide-react";
+import { Play, Quote } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+
 const ClientTestimonial = () => {
-  return <section className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8 sm:mb-12">
-          <div className="flex items-center justify-center mb-3 sm:mb-4">
-            <Play className="h-8 w-8 sm:h-10 sm:w-10 text-ekam-primary mr-3 sm:mr-4" />
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
-              Client Success Stories
-            </h2>
+  const [isVisible, setIsVisible] = useState(false);
+  const [activeVideo, setActiveVideo] = useState<number | null>(null);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  const testimonials = [
+    {
+      title: "AI Social Media Automation",
+      description: "How we transformed their content creation process with intelligent automation",
+      videoUrl: "https://www.youtube.com/embed/6gp2a6llZYM",
+      client: "Content Marketing"
+    },
+    {
+      title: "Custom API Integration",
+      description: "Finding relevant product information through intelligent AI agents",
+      videoUrl: "https://www.youtube.com/embed/jM_dnvqkad8",
+      client: "E-commerce"
+    },
+    {
+      title: "Blog Automation Success",
+      description: "Real feedback from our satisfied clients on AI-powered content creation",
+      videoUrl: "https://www.youtube.com/embed/3BwP6GI7000",
+      client: "Content Creation"
+    }
+  ];
+
+  return (
+    <section ref={sectionRef} id="testimonials" className="py-24 bg-gray-50 relative overflow-hidden">
+      {/* Subtle background decoration */}
+      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-ekam-primary/[0.02] rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-ekam-primary/[0.02] rounded-full blur-3xl"></div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-ekam-primary/10 border border-ekam-primary/20 mb-6">
+            <Play className="h-4 w-4 text-ekam-primary" />
+            <span className="text-sm font-medium text-ekam-primary">Client Stories</span>
           </div>
-          <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover how our AI automation solutions are transforming businesses
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
+            See Our Work in <span className="text-ekam-primary">Action</span>
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            Watch real implementations and hear directly from businesses we've helped transform
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
-          {/* First Video - AI Automation Success */}
-          <Card className="border-0 shadow-xl bg-gradient-to-r from-blue-50 to-purple-50">
-            <CardContent className="p-4 sm:p-6">
-              <div className="text-center mb-4">
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">AI Social Media Automation Success</h3>
-                <p className="text-sm text-gray-600">
-                  How we transformed their business processes
-                </p>
-              </div>
-              
-              <div className="aspect-video rounded-lg sm:rounded-xl overflow-hidden shadow-lg">
-                <iframe className="w-full h-full" src="https://www.youtube.com/embed/6gp2a6llZYM" title="Client Testimonial - AI Automation Success" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-              </div>
-            </CardContent>
-          </Card>
+        {/* Testimonials Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {testimonials.map((testimonial, index) => (
+            <div
+              key={index}
+              className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+              style={{ transitionDelay: `${300 + index * 150}ms` }}
+              onMouseEnter={() => setActiveVideo(index)}
+              onMouseLeave={() => setActiveVideo(null)}
+            >
+              <Card className="group relative border-0 shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden rounded-2xl h-full bg-white hover:-translate-y-1">
+                {/* Top accent line */}
+                <div className="absolute top-0 left-0 right-0 h-1 bg-ekam-primary"></div>
 
-          {/* Second Video - App Sumo Integration */}
-          <Card className="border-0 shadow-xl bg-gradient-to-r from-purple-50 to-pink-50">
-            <CardContent className="p-4 sm:p-6">
-              <div className="text-center mb-4">
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">Find relevant product information through AI Agents</h3>
-                <p className="text-sm text-gray-600">Custom API Integration</p>
-              </div>
-              
-              <div className="aspect-video rounded-lg sm:rounded-xl overflow-hidden shadow-lg">
-                <iframe className="w-full h-full" src="https://www.youtube.com/embed/jM_dnvqkad8" title="Custom API Integration for App Sumo: Streamlining Workflow with n8n | Client Success Story" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-              </div>
-            </CardContent>
-          </Card>
+                {/* Decorative quote icon */}
+                <div className="absolute top-4 right-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                  <Quote className="h-12 w-12 text-ekam-primary" />
+                </div>
 
-          {/* Third Video - YouTube Shorts Testimonial */}
-          <Card className="border-0 shadow-xl bg-gradient-to-r from-green-50 to-blue-50">
-            <CardContent className="p-4 sm:p-6">
-              <div className="text-center mb-4">
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">Client Success Story</h3>
-                <p className="text-sm text-gray-600">
-                  Real feedback from our satisfied client
-                </p>
-              </div>
-              
-              <div className="aspect-video rounded-lg sm:rounded-xl overflow-hidden shadow-lg">
-                <iframe className="w-full h-full" src="https://www.youtube.com/embed/3BwP6GI7000" title="Client Testimonial - Success Story" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-              </div>
-            </CardContent>
-          </Card>
+                <CardContent className="p-6 relative">
+                  {/* Category tag */}
+                  <span className="inline-block px-3 py-1 rounded-full bg-gray-100 text-gray-600 text-xs font-medium mb-4">
+                    {testimonial.client}
+                  </span>
+
+                  {/* Title and description */}
+                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-ekam-primary transition-colors">
+                    {testimonial.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm mb-5 leading-relaxed">
+                    {testimonial.description}
+                  </p>
+
+                  {/* Video container */}
+                  <div className={`relative aspect-video rounded-xl overflow-hidden shadow-md ring-1 ring-gray-200 transition-all duration-300 ${activeVideo === index ? 'ring-2 ring-ekam-primary/30' : ''}`}>
+                    <iframe
+                      className="w-full h-full"
+                      src={testimonial.videoUrl}
+                      title={testimonial.title}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          ))}
+        </div>
+
+        {/* Simple trust indicator */}
+        <div className={`text-center mt-14 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '700ms' }}>
+          <p className="text-gray-500 text-sm">
+            Trusted by businesses across industries for AI automation solutions
+          </p>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default ClientTestimonial;
