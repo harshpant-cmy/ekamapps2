@@ -1,10 +1,10 @@
+
 import { Card, CardContent } from "@/components/ui/card";
-import { Play, Quote } from "lucide-react";
+import { Play, Star } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 const ClientTestimonial = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [activeVideo, setActiveVideo] = useState<number | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -27,42 +27,38 @@ const ClientTestimonial = () => {
   const testimonials = [
     {
       title: "AI Social Media Automation",
-      description: "How we transformed their content creation process with intelligent automation",
+      description: "Transformed content creation workflow with intelligent automation, reducing production time by 70%",
       videoUrl: "https://www.youtube.com/embed/6gp2a6llZYM",
-      client: "Content Marketing"
+      category: "Content Marketing",
+      gradient: "from-purple-500 to-pink-500"
     },
     {
       title: "Custom API Integration",
-      description: "Finding relevant product information through intelligent AI agents",
+      description: "Intelligent AI agents for product discovery, improving customer experience and conversion rates",
       videoUrl: "https://www.youtube.com/embed/jM_dnvqkad8",
-      client: "E-commerce"
+      category: "E-commerce",
+      gradient: "from-blue-500 to-cyan-500"
     },
     {
       title: "Blog Automation Success",
-      description: "Real feedback from our satisfied clients on AI-powered content creation",
+      description: "AI-powered content creation system generating high-quality posts with minimal human intervention",
       videoUrl: "https://www.youtube.com/embed/3BwP6GI7000",
-      client: "Content Creation"
+      category: "Content Creation",
+      gradient: "from-emerald-500 to-teal-500"
     }
   ];
 
   return (
-    <section ref={sectionRef} id="testimonials" className="py-24 bg-gray-50 relative overflow-hidden">
-      {/* Subtle background decoration */}
-      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-ekam-primary/[0.02] rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-ekam-primary/[0.02] rounded-full blur-3xl"></div>
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section ref={sectionRef} id="testimonials" className="py-24 bg-white relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-ekam-primary/10 border border-ekam-primary/20 mb-6">
-            <Play className="h-4 w-4 text-ekam-primary" />
-            <span className="text-sm font-medium text-ekam-primary">Client Stories</span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
+          <p className="text-sm font-semibold text-ekam-primary uppercase tracking-wider mb-4">CASE STUDIES</p>
+          <h2 className="heading-section text-gray-900 mb-4">
             See Our Work in <span className="text-ekam-primary">Action</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Watch real implementations and hear directly from businesses we've helped transform
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Real implementations demonstrating the impact of our AI solutions across industries
           </p>
         </div>
 
@@ -73,26 +69,26 @@ const ClientTestimonial = () => {
               key={index}
               className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
               style={{ transitionDelay: `${300 + index * 150}ms` }}
-              onMouseEnter={() => setActiveVideo(index)}
-              onMouseLeave={() => setActiveVideo(null)}
             >
-              <Card className="group relative border-0 shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden rounded-2xl h-full bg-white hover:-translate-y-1">
-                {/* Top accent line */}
-                <div className="absolute top-0 left-0 right-0 h-1 bg-ekam-primary"></div>
+              <Card className="group relative border border-gray-100 shadow-sm hover:shadow-xl rounded-2xl overflow-hidden bg-white h-full transition-all duration-500 hover:-translate-y-2 hover:border-ekam-primary/20">
+                {/* Gradient accent line */}
+                <div className={`h-1 bg-gradient-to-r ${testimonial.gradient}`} />
 
-                {/* Decorative quote icon */}
-                <div className="absolute top-4 right-4 opacity-5 group-hover:opacity-10 transition-opacity">
-                  <Quote className="h-12 w-12 text-ekam-primary" />
-                </div>
-
-                <CardContent className="p-6 relative">
+                <CardContent className="p-6">
                   {/* Category tag */}
-                  <span className="inline-block px-3 py-1 rounded-full bg-gray-100 text-gray-600 text-xs font-medium mb-4">
-                    {testimonial.client}
-                  </span>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gray-50 border border-gray-100 text-xs font-medium text-gray-600">
+                      {testimonial.category}
+                    </span>
+                    <div className="flex gap-0.5">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="h-3.5 w-3.5 fill-amber-400 text-amber-400" />
+                      ))}
+                    </div>
+                  </div>
 
                   {/* Title and description */}
-                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-ekam-primary transition-colors">
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-ekam-primary transition-colors">
                     {testimonial.title}
                   </h3>
                   <p className="text-gray-600 text-sm mb-5 leading-relaxed">
@@ -100,7 +96,7 @@ const ClientTestimonial = () => {
                   </p>
 
                   {/* Video container */}
-                  <div className={`relative aspect-video rounded-xl overflow-hidden shadow-md ring-1 ring-gray-200 transition-all duration-300 ${activeVideo === index ? 'ring-2 ring-ekam-primary/30' : ''}`}>
+                  <div className="relative aspect-video rounded-xl overflow-hidden border border-gray-100 group-hover:border-ekam-primary/10 transition-colors bg-gray-50">
                     <iframe
                       className="w-full h-full"
                       src={testimonial.videoUrl}
@@ -108,7 +104,7 @@ const ClientTestimonial = () => {
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                       allowFullScreen
-                    ></iframe>
+                    />
                   </div>
                 </CardContent>
               </Card>
@@ -116,11 +112,20 @@ const ClientTestimonial = () => {
           ))}
         </div>
 
-        {/* Simple trust indicator */}
-        <div className={`text-center mt-14 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '700ms' }}>
-          <p className="text-gray-500 text-sm">
-            Trusted by businesses across industries for AI automation solutions
-          </p>
+        {/* Stats Row */}
+        <div className={`grid grid-cols-3 gap-8 mt-16 pt-16 border-t border-gray-100 transition-all duration-700 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className="text-center">
+            <p className="text-3xl lg:text-4xl font-bold text-gray-900 mb-2">80%</p>
+            <p className="text-sm text-gray-600">Average reduction in manual effort</p>
+          </div>
+          <div className="text-center">
+            <p className="text-3xl lg:text-4xl font-bold text-gray-900 mb-2">99%</p>
+            <p className="text-sm text-gray-600">Document processing accuracy</p>
+          </div>
+          <div className="text-center">
+            <p className="text-3xl lg:text-4xl font-bold text-gray-900 mb-2">2x</p>
+            <p className="text-sm text-gray-600">Faster setup than industry standard</p>
+          </div>
         </div>
       </div>
     </section>

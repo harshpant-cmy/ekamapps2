@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Calendar, User, ArrowRight } from "lucide-react";
+import { Calendar, User, ArrowRight, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const BlogList = () => {
@@ -20,34 +20,41 @@ const BlogList = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gray-50">
       <Header />
-      
-      <div className="container mx-auto px-4 py-12">
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Blog header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-foreground mb-4">
-            Ekam Blog
+        <div className="text-center mb-14">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-ekam-primary/10 border border-ekam-primary/20 mb-6">
+            <BookOpen className="h-4 w-4 text-ekam-primary" />
+            <span className="text-sm font-medium text-ekam-primary">Insights & Resources</span>
+          </div>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            Ekam <span className="text-ekam-primary">Blog</span>
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Insights, trends, and expert perspectives on AI, automation, and digital transformation
           </p>
         </div>
-        
+
         {/* Blog posts grid */}
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
           {blogPosts.map((post) => (
-            <Card key={post.id} className="group hover:shadow-lg transition-shadow duration-300">
-              <div className="aspect-video overflow-hidden rounded-t-lg">
-                <img 
-                  src={post.image} 
+            <Card key={post.id} className="group border border-gray-100 shadow-sm hover:shadow-lg rounded-2xl overflow-hidden bg-white transition-all duration-300 hover:-translate-y-1 hover:border-ekam-primary/20">
+              {/* Gradient accent line */}
+              <div className="h-1 bg-gradient-to-r from-ekam-primary via-ekam-primary/70 to-ekam-primary"></div>
+
+              <div className="aspect-video overflow-hidden">
+                <img
+                  src={post.image}
                   alt={post.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
-              
-              <CardHeader>
-                <div className="flex items-center gap-4 text-sm text-muted-foreground mb-2">
+
+              <CardHeader className="pb-3">
+                <div className="flex items-center gap-4 text-sm text-gray-500 mb-2">
                   <div className="flex items-center gap-1">
                     <Calendar className="h-4 w-4" />
                     <span>{post.date}</span>
@@ -57,24 +64,24 @@ const BlogList = () => {
                     <span>{post.author}</span>
                   </div>
                 </div>
-                
-                <CardTitle className="line-clamp-2 group-hover:text-primary transition-colors">
+
+                <CardTitle className="text-lg font-bold line-clamp-2 group-hover:text-ekam-primary transition-colors">
                   {post.title}
                 </CardTitle>
               </CardHeader>
-              
-              <CardContent>
-                <CardDescription className="line-clamp-3 mb-4">
+
+              <CardContent className="pt-0">
+                <CardDescription className="line-clamp-3 mb-4 text-gray-600">
                   {post.excerpt}
                 </CardDescription>
-                
+
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-muted-foreground">{post.readTime}</span>
-                  
+                  <span className="text-sm text-gray-500">{post.readTime}</span>
+
                   <Link to={`/blog/${post.slug}`}>
-                    <Button variant="ghost" size="sm" className="group/button">
+                    <Button variant="ghost" size="sm" className="text-ekam-primary hover:bg-ekam-primary/5 group/btn">
                       Read More
-                      <ArrowRight className="ml-2 h-4 w-4 group-hover/button:translate-x-1 transition-transform" />
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
                     </Button>
                   </Link>
                 </div>
@@ -82,15 +89,18 @@ const BlogList = () => {
             </Card>
           ))}
         </div>
-        
+
         {/* Coming soon message */}
-        <div className="text-center mt-12">
-          <p className="text-muted-foreground">
-            More insightful articles coming soon. Stay tuned!
-          </p>
+        <div className="text-center mt-14">
+          <div className="inline-flex items-center gap-3 px-5 py-3 bg-white rounded-full border border-gray-100 shadow-sm">
+            <div className="w-2 h-2 bg-ekam-primary rounded-full animate-pulse"></div>
+            <p className="text-gray-600 text-sm font-medium">
+              More insightful articles coming soon. Stay tuned!
+            </p>
+          </div>
         </div>
       </div>
-      
+
       <Footer />
     </div>
   );
