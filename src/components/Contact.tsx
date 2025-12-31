@@ -26,7 +26,7 @@ const Contact = () => {
   }, []);
 
   const features = [
-    { icon: Award, title: "19+ years experience", description: "Proven expertise", color: "text-amber-600", bg: "bg-amber-50" },
+    { icon: Award, title: "25+ years experience", description: "Proven expertise", color: "text-amber-600", bg: "bg-amber-50" },
     { icon: Building, title: "Major brand track record", description: "Industry leaders", color: "text-blue-600", bg: "bg-blue-50" },
     { icon: Target, title: "Custom AI solutions", description: "Tailored for you", color: "text-purple-600", bg: "bg-purple-50" },
     { icon: TrendingUp, title: "Measurable ROI", description: "Proven results", color: "text-emerald-600", bg: "bg-emerald-50" },

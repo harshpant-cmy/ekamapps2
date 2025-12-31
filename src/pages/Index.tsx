@@ -1,10 +1,10 @@
 
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import ClientLogos from "@/components/ClientLogos";
 import Services from "@/components/Services";
 import Projects from "@/components/Projects";
 import ExpertiseStatement from "@/components/ExpertiseStatement";
+import About from "@/components/About";
 import TurrantShowcase from "@/components/TurrantShowcase";
 import Process from "@/components/Process";
 import TechStack from "@/components/TechStack";
@@ -24,14 +24,14 @@ const Index = () => {
 
       {/* Main content sections */}
       <main className="relative">
-        {/* Trust indicators - client logos */}
-        <ClientLogos />
-
         {/* Services - What we build */}
         <Services />
 
         {/* Expertise statement - HatchWorks inspired */}
         <ExpertiseStatement />
+
+        {/* About the Founder */}
+        <About />
 
         {/* Projects showcase - Our work */}
         <Projects />

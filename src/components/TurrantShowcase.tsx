@@ -61,7 +61,7 @@ const TurrantShowcase = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="py-24 bg-gradient-to-br from-ekam-primary via-[#012825] to-[#011a18] relative overflow-hidden">
+    <section ref={sectionRef} id="turrant" className="py-24 bg-gradient-to-br from-ekam-primary via-[#012825] to-[#011a18] relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 noise-overlay" />

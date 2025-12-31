@@ -8,6 +8,8 @@ import Index from "./pages/Index";
 import AgentPage from "./pages/AgentPage";
 import BlogList from "./pages/BlogList";
 import BlogPage from "./pages/BlogPage";
+import Careers from "./pages/Careers";
+import CaseStudies from "./pages/CaseStudies";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsConditions from "./pages/TermsConditions";
 import NotFound from "./pages/NotFound";
@@ -25,6 +27,8 @@ const App = () => (
           <Route path="/agent/:agentId" element={<AgentPage />} />
           <Route path="/blog" element={<BlogList />} />
           <Route path="/blog/:slug" element={<BlogPage />} />
+          <Route path="/careers" element={<Careers />} />
+          <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-conditions" element={<TermsConditions />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

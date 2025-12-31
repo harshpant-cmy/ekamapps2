@@ -68,7 +68,7 @@ const Hero = () => {
             }`}
           >
             We build voice agents, WhatsApp bots, custom dashboards, and AI-powered web applications
-            that handle your repetitive tasks—so your team can focus on what matters.
+            that handle your repetitive tasks, so your team can focus on what matters.
           </p>
 
           {/* CTAs */}

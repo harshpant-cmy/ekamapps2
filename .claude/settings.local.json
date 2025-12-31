@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git clone:*)",
+      "Bash(npm install)",
+      "Bash(npm run dev:*)",
+      "Bash(git checkout:*)",
+      "Bash(git push:*)",
+      "Bash(dir c:ekamapps2 /s /b)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nEnhance website design with modern B2B SaaS styling\n\n- Add scroll animations across all sections using IntersectionObserver\n- Redesign About section with enhanced credibility layout\n- Enhance Process section with gradient icons and animated timeline\n- Simplify Client Testimonials with clean, professional design\n- Add subtle background decorations and hover effects throughout\n- Remove TrustedBy section from Index page\n- Update section headers with consistent badge styling\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git config:*)",
+      "Bash(timeout:*)",
+      "Bash(ping:*)",
+      "Bash(npm run build:*)",
+      "Bash(git commit:*)"
+    ]
+  }
+}

@@ -71,7 +71,7 @@ const Footer = () => {
               />
             </Link>
             <p className="text-white/60 text-sm leading-relaxed max-w-sm">
-              Enterprise AI solutions built on 19+ years of technology expertise. We help businesses automate, scale, and innovate with intelligent AI agents and document automation.
+              Enterprise AI solutions built on 25+ years of technology expertise. We help businesses automate, scale, and innovate with intelligent AI agents and document automation.
             </p>
 
             {/* Contact Info */}

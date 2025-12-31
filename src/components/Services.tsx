@@ -29,43 +29,43 @@ const Services = () => {
       icon: Phone,
       title: "Voice AI Agents",
       description: "Intelligent voice systems that answer calls, collect information, and handle customer inquiries 24/7 without human intervention.",
-      gradient: "from-violet-500 to-purple-600",
-      bgGlow: "bg-violet-500/10"
+      gradient: "from-[#55c5d1] to-[#3da8b4]",
+      bgGlow: "bg-[#55c5d1]/10"
     },
     {
       icon: MessageSquare,
       title: "WhatsApp Bots",
-      description: "Conversational AI bots that engage customers on WhatsApp—handling queries, processing documents, and driving conversions.",
-      gradient: "from-green-500 to-emerald-600",
-      bgGlow: "bg-green-500/10"
+      description: "Conversational AI bots that engage customers on WhatsApp, handling queries, processing documents, and driving conversions.",
+      gradient: "from-[#55c5d1] to-[#3da8b4]",
+      bgGlow: "bg-[#55c5d1]/10"
     },
     {
       icon: BarChart3,
       title: "Custom Dashboards",
       description: "Real-time analytics dashboards that give you complete visibility into your automated workflows and business metrics.",
-      gradient: "from-blue-500 to-cyan-600",
-      bgGlow: "bg-blue-500/10"
+      gradient: "from-[#55c5d1] to-[#3da8b4]",
+      bgGlow: "bg-[#55c5d1]/10"
     },
     {
       icon: Code2,
       title: "Web Applications",
-      description: "Full-stack web applications with AI capabilities—from customer portals to internal tools that streamline operations.",
-      gradient: "from-orange-500 to-amber-600",
-      bgGlow: "bg-orange-500/10"
+      description: "Full-stack web applications with AI capabilities, from customer portals to internal tools that streamline operations.",
+      gradient: "from-[#55c5d1] to-[#3da8b4]",
+      bgGlow: "bg-[#55c5d1]/10"
     },
     {
       icon: FileCheck,
       title: "Document Processing",
       description: "AI-powered extraction from invoices, IDs, and forms with 99% accuracy. Auto-verify with government APIs in real-time.",
-      gradient: "from-pink-500 to-rose-600",
-      bgGlow: "bg-pink-500/10"
+      gradient: "from-[#55c5d1] to-[#3da8b4]",
+      bgGlow: "bg-[#55c5d1]/10"
     },
     {
       icon: Link2,
       title: "System Integration",
-      description: "Connect your existing tools—CRM, ERP, databases—into unified workflows that run automatically without constant attention.",
-      gradient: "from-teal-500 to-cyan-600",
-      bgGlow: "bg-teal-500/10"
+      description: "Connect your existing tools like CRM, ERP, and databases into unified workflows that run automatically without constant attention.",
+      gradient: "from-[#55c5d1] to-[#3da8b4]",
+      bgGlow: "bg-[#55c5d1]/10"
     }
   ];
 

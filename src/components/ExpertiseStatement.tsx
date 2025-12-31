@@ -27,7 +27,7 @@ const ExpertiseStatement = () => {
     {
       icon: Users,
       title: "The Right Expertise",
-      description: "19+ years of cross-functional experience delivering end-to-end AI solutions focused on measurable ROI"
+      description: "25+ years of cross-functional experience delivering end-to-end AI solutions focused on measurable ROI"
     },
     {
       icon: CheckCircle2,
@@ -56,7 +56,7 @@ const ExpertiseStatement = () => {
             It is easy to do AI.
           </h2>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#55c5d1] mb-8 leading-tight">
-            It is hard to do well.
+            It is hard to do it well.
           </h2>
           <p className="text-lg md:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
             We act as <span className="font-semibold text-white">your strategic partner</span>, helping you navigate the AI landscape
