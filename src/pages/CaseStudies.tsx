@@ -1,8 +1,7 @@
 
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Phone, MessageSquare, FileCheck, TrendingUp, Clock, CheckCircle2, ExternalLink, BarChart3, Users, Zap } from "lucide-react";
-import { Link } from "react-router-dom";
+import { ArrowRight, Phone, MessageSquare, FileCheck, TrendingUp, Clock, CheckCircle2, BarChart3, Users, Zap } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -327,16 +326,14 @@ const CaseStudies = () => {
                   Schedule a Call
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
-                <Link to="/#projects">
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="h-14 px-8 border-2 border-white/30 text-white hover:bg-white/10 rounded-xl transition-all duration-300 font-semibold"
-                  >
-                    View All Projects
-                    <ExternalLink className="ml-2 h-5 w-5" />
-                  </Button>
-                </Link>
+                <Button
+                  size="lg"
+                  className="h-14 px-8 bg-[#4ade80] text-white hover:bg-[#22c55e] rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 group font-semibold"
+                  onClick={() => window.location.href = '/#projects'}
+                >
+                  View All Projects
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
               </div>
             </div>
           </div>

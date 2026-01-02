@@ -20,8 +20,8 @@ const Projects = () => {
         { label: "Response Time", value: "<3s" },
         { label: "Accuracy", value: "99%" }
       ],
-      gradient: "from-blue-600 to-cyan-500",
-      bgGradient: "from-blue-50 via-cyan-50 to-white",
+      gradient: "from-[#4ade80] to-emerald-500",
+      bgGradient: "from-green-50 via-emerald-50 to-white",
       icon: Phone,
       tags: ["Voice AI", "WhatsApp", "OCR", "Dashboard"]
     },
@@ -36,8 +36,8 @@ const Projects = () => {
         { label: "Posts Analyzed", value: "10K+" },
         { label: "Time Saved", value: "80%" }
       ],
-      gradient: "from-purple-600 to-pink-500",
-      bgGradient: "from-purple-50 via-pink-50 to-white",
+      gradient: "from-[#4ade80] to-emerald-500",
+      bgGradient: "from-green-50 via-emerald-50 to-white",
       icon: TrendingUp,
       tags: ["Social Media", "AI Analytics", "Trend Detection"]
     },
@@ -52,7 +52,7 @@ const Projects = () => {
         { label: "Inquiries", value: "3x more" },
         { label: "Setup Time", value: "<1 day" }
       ],
-      gradient: "from-green-600 to-emerald-500",
+      gradient: "from-[#4ade80] to-emerald-500",
       bgGradient: "from-green-50 via-emerald-50 to-white",
       icon: ShoppingBag,
       tags: ["Shopify", "WhatsApp", "QR Codes", "Mobile"]
@@ -68,8 +68,8 @@ const Projects = () => {
         { label: "AI Riddles", value: "Infinite" },
         { label: "Voice Input", value: "Yes" }
       ],
-      gradient: "from-orange-600 to-amber-500",
-      bgGradient: "from-orange-50 via-amber-50 to-white",
+      gradient: "from-[#4ade80] to-emerald-500",
+      bgGradient: "from-green-50 via-emerald-50 to-white",
       icon: Gamepad2,
       tags: ["Real-time", "AI Generation", "Voice Recognition"]
     }

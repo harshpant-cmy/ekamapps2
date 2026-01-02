@@ -55,7 +55,7 @@ const ExpertiseStatement = () => {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
             It is easy to do AI.
           </h2>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#55c5d1] mb-8 leading-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#4ade80] mb-8 leading-tight">
             It is hard to do it well.
           </h2>
           <p className="text-lg md:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
@@ -78,7 +78,7 @@ const ExpertiseStatement = () => {
                 style={{ transitionDelay: `${400 + index * 100}ms` }}
               >
                 <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-white/5 border border-white/10 mb-5">
-                  <IconComponent className="h-7 w-7 text-[#55c5d1]" />
+                  <IconComponent className="h-7 w-7 text-[#4ade80]" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">
                   {pillar.title}

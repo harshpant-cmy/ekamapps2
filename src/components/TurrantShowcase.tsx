@@ -66,7 +66,7 @@ const TurrantShowcase = () => {
       <div className="absolute inset-0">
         <div className="absolute inset-0 noise-overlay" />
         {/* Gradient orbs */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#55c5d1]/10 rounded-full blur-[100px]" />
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#4ade80]/10 rounded-full blur-[100px]" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-emerald-500/10 rounded-full blur-[80px]" />
       </div>
 
@@ -85,7 +85,7 @@ const TurrantShowcase = () => {
 
             {/* Logo/Title */}
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              Turrant<span className="text-[#55c5d1]">.ai</span>
+              Turrant<span className="text-[#4ade80]">.ai</span>
             </h2>
 
             <p className="text-xl text-white/80 mb-8 leading-relaxed">
@@ -159,8 +159,8 @@ const TurrantShowcase = () => {
                     }`}
                     style={{ transitionDelay: `${600 + index * 100}ms` }}
                   >
-                    <div className="w-10 h-10 rounded-lg bg-[#55c5d1]/20 flex items-center justify-center mb-3">
-                      <IconComponent className="h-5 w-5 text-[#55c5d1]" />
+                    <div className="w-10 h-10 rounded-lg bg-[#4ade80]/20 flex items-center justify-center mb-3">
+                      <IconComponent className="h-5 w-5 text-[#4ade80]" />
                     </div>
                     <h4 className="font-semibold text-white text-sm mb-1">{feature.title}</h4>
                     <p className="text-xs text-white/60 leading-relaxed">{feature.description}</p>

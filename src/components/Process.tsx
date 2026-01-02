@@ -191,10 +191,10 @@ const Process = () => {
             {steps.map((step, index) => {
               const IconComponent = step.icon;
               const gradients = [
-                "from-cyan-400 to-sky-400",
-                "from-amber-400 to-yellow-400",
-                "from-green-400 to-emerald-400",
-                "from-teal-400 to-cyan-400"
+                "from-[#4ade80] to-emerald-400",
+                "from-[#4ade80] to-emerald-400",
+                "from-[#4ade80] to-emerald-400",
+                "from-[#4ade80] to-emerald-400"
               ];
               return (
                 <div

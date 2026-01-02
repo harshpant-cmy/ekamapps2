@@ -136,8 +136,8 @@ const AIAgents = () => {
     <section ref={sectionRef} id="agents" className="py-24 bg-gray-50 relative overflow-hidden">
       {/* Background decorations */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(1,58,55,0.05),rgba(255,255,255,0))]" />
-      <div className="absolute top-1/4 right-0 w-[400px] h-[400px] bg-ekam-accent/5 rounded-full blur-[100px]" />
-      <div className="absolute bottom-1/4 left-0 w-[300px] h-[300px] bg-ekam-primary/5 rounded-full blur-[80px]" />
+      <div className="absolute top-1/4 right-0 w-[400px] h-[400px] bg-[#4ade80]/10 rounded-full blur-[100px]" />
+      <div className="absolute bottom-1/4 left-0 w-[300px] h-[300px] bg-[#4ade80]/5 rounded-full blur-[80px]" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -178,26 +178,26 @@ const AIAgents = () => {
             return (
               <Card
                 key={agent.id}
-                className={`group relative bg-white/80 backdrop-blur-sm hover:bg-white transition-all duration-500 border border-gray-100 hover:border-ekam-primary/20 overflow-hidden flex flex-col h-full rounded-2xl hover:shadow-premium-lg hover:-translate-y-2 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                className={`group relative bg-white/80 backdrop-blur-sm hover:bg-white transition-all duration-500 border border-gray-100 hover:border-[#4ade80]/30 overflow-hidden flex flex-col h-full rounded-2xl hover:shadow-premium-lg hover:-translate-y-2 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                 style={{ transitionDelay: `${200 + index * 50}ms` }}
               >
                 {/* Gradient overlay on hover */}
-                <div className="absolute inset-0 bg-gradient-to-br from-ekam-primary/[0.02] to-ekam-accent/[0.02] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-br from-[#4ade80]/[0.02] to-[#22c55e]/[0.02] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 {/* Premium accent line */}
-                <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-ekam-primary via-ekam-accent to-ekam-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#4ade80] via-[#22c55e] to-[#4ade80] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 <CardHeader className="relative space-y-4 flex-shrink-0 pb-3">
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-ekam-primary/10 to-ekam-accent/10 flex items-center justify-center group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-ekam-primary/10 transition-all duration-300">
-                      <IconComponent className="h-6 w-6 text-ekam-primary" />
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#4ade80]/20 to-[#22c55e]/10 flex items-center justify-center group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-[#4ade80]/20 transition-all duration-300">
+                      <IconComponent className="h-6 w-6 text-[#4ade80]" />
                     </div>
-                    <CardTitle className="text-lg font-semibold text-gray-900 group-hover:text-ekam-primary transition-colors leading-tight">
+                    <CardTitle className="text-lg font-semibold text-gray-900 group-hover:text-[#4ade80] transition-colors leading-tight">
                       {agent.title}
                     </CardTitle>
                   </div>
 
-                  <div className="aspect-video bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl overflow-hidden border border-gray-100 group-hover:border-ekam-primary/10 transition-colors">
+                  <div className="aspect-video bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl overflow-hidden border border-gray-100 group-hover:border-[#4ade80]/20 transition-colors">
                     <img
                       src={agent.image}
                       alt={`${agent.title} workflow`}
@@ -217,7 +217,7 @@ const AIAgents = () => {
                       {agent.features.slice(0, 3).map((feature, idx) => (
                         <span
                           key={idx}
-                          className="text-xs px-3 py-1.5 rounded-full bg-gray-50 text-gray-600 font-medium border border-gray-100 group-hover:border-ekam-primary/20 group-hover:bg-ekam-primary/5 transition-all duration-300"
+                          className="text-xs px-3 py-1.5 rounded-full bg-gray-50 text-gray-600 font-medium border border-gray-100 group-hover:border-[#4ade80]/30 group-hover:bg-[#4ade80]/5 transition-all duration-300"
                         >
                           {feature}
                         </span>
@@ -228,7 +228,7 @@ const AIAgents = () => {
                   <Button
                     variant="ghost"
                     size="sm"
-                    className="w-full justify-between text-ekam-primary hover:bg-ekam-primary/5 group/btn mt-auto h-11 rounded-xl"
+                    className="w-full justify-between text-[#4ade80] hover:bg-[#4ade80]/5 group/btn mt-auto h-11 rounded-xl"
                     asChild
                   >
                     <Link to={`/agent/${agent.id}`}>
@@ -250,12 +250,12 @@ const AIAgents = () => {
           <div className="relative bg-gradient-to-br from-ekam-primary via-[#012825] to-[#011a18] rounded-3xl p-12 overflow-hidden">
             {/* Background effects */}
             <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:30px_30px]" />
-            <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-ekam-accent/10 rounded-full blur-[80px]" />
+            <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-[#4ade80]/10 rounded-full blur-[80px]" />
             <div className="absolute bottom-0 left-0 w-[200px] h-[200px] bg-white/5 rounded-full blur-[60px]" />
 
             <div className="relative">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-6">
-                <Sparkles className="h-4 w-4 text-ekam-accent" />
+                <Sparkles className="h-4 w-4 text-[#4ade80]" />
                 <span className="text-sm font-medium text-white/80">Custom Solutions Available</span>
               </div>
 
@@ -278,7 +278,7 @@ const AIAgents = () => {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-white/20 text-white hover:bg-white/10 h-12 px-8 rounded-xl transition-all duration-300"
+                  className="border-2 border-white/50 text-white hover:bg-white/10 hover:border-white h-12 px-8 rounded-xl transition-all duration-300"
                   onClick={() => {
                     const servicesSection = document.querySelector('#services');
                     if (servicesSection) {

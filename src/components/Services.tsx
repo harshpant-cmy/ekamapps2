@@ -29,43 +29,43 @@ const Services = () => {
       icon: Phone,
       title: "Voice AI Agents",
       description: "Intelligent voice systems that answer calls, collect information, and handle customer inquiries 24/7 without human intervention.",
-      gradient: "from-[#55c5d1] to-[#3da8b4]",
-      bgGlow: "bg-[#55c5d1]/10"
+      gradient: "from-[#4ade80] to-[#22c55e]",
+      bgGlow: "bg-[#4ade80]/10"
     },
     {
       icon: MessageSquare,
       title: "WhatsApp Bots",
       description: "Conversational AI bots that engage customers on WhatsApp, handling queries, processing documents, and driving conversions.",
-      gradient: "from-[#55c5d1] to-[#3da8b4]",
-      bgGlow: "bg-[#55c5d1]/10"
+      gradient: "from-[#4ade80] to-[#22c55e]",
+      bgGlow: "bg-[#4ade80]/10"
     },
     {
       icon: BarChart3,
       title: "Custom Dashboards",
       description: "Real-time analytics dashboards that give you complete visibility into your automated workflows and business metrics.",
-      gradient: "from-[#55c5d1] to-[#3da8b4]",
-      bgGlow: "bg-[#55c5d1]/10"
+      gradient: "from-[#4ade80] to-[#22c55e]",
+      bgGlow: "bg-[#4ade80]/10"
     },
     {
       icon: Code2,
       title: "Web Applications",
       description: "Full-stack web applications with AI capabilities, from customer portals to internal tools that streamline operations.",
-      gradient: "from-[#55c5d1] to-[#3da8b4]",
-      bgGlow: "bg-[#55c5d1]/10"
+      gradient: "from-[#4ade80] to-[#22c55e]",
+      bgGlow: "bg-[#4ade80]/10"
     },
     {
       icon: FileCheck,
       title: "Document Processing",
       description: "AI-powered extraction from invoices, IDs, and forms with 99% accuracy. Auto-verify with government APIs in real-time.",
-      gradient: "from-[#55c5d1] to-[#3da8b4]",
-      bgGlow: "bg-[#55c5d1]/10"
+      gradient: "from-[#4ade80] to-[#22c55e]",
+      bgGlow: "bg-[#4ade80]/10"
     },
     {
       icon: Link2,
       title: "System Integration",
       description: "Connect your existing tools like CRM, ERP, and databases into unified workflows that run automatically without constant attention.",
-      gradient: "from-[#55c5d1] to-[#3da8b4]",
-      bgGlow: "bg-[#55c5d1]/10"
+      gradient: "from-[#4ade80] to-[#22c55e]",
+      bgGlow: "bg-[#4ade80]/10"
     }
   ];
 

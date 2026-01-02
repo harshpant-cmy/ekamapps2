@@ -2,6 +2,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
+import AIAgents from "@/components/AIAgents";
 import Projects from "@/components/Projects";
 import ExpertiseStatement from "@/components/ExpertiseStatement";
 import About from "@/components/About";
@@ -27,11 +28,14 @@ const Index = () => {
         {/* Services - What we build */}
         <Services />
 
+        {/* About the Team */}
+        <About />
+
         {/* Expertise statement - HatchWorks inspired */}
         <ExpertiseStatement />
 
-        {/* About the Founder */}
-        <About />
+        {/* AI Agents - Pre-built AI Solutions */}
+        <AIAgents />
 
         {/* Projects showcase - Our work */}
         <Projects />

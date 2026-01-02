@@ -30,7 +30,7 @@ const Header = () => {
     { href: "/#home", label: "Home" },
     { href: "/#about", label: "About" },
     { href: "/#agents", label: "AI Agents" },
-    { href: "/blog", label: "Blog", isRoute: true },
+    { href: "https://turrant.ai/blog.html", label: "Blog", isExternal: true },
     { href: "/#contact", label: "Contact" },
   ];
 
@@ -89,8 +89,8 @@ const Header = () => {
         id: "blog",
         name: "Blog",
         description: "Insights on AI, automation, and more",
-        href: "/blog",
-        isRoute: true,
+        href: "https://turrant.ai/blog.html",
+        isExternal: true,
         icon: BookOpen
       },
       {
@@ -145,7 +145,18 @@ const Header = () => {
           {/* Desktop Navigation - Center */}
           <nav className="hidden lg:flex items-center justify-center gap-8 flex-1">
             {navLinks.map((link) =>
-              link.isRoute ? (
+              link.isExternal ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`relative ${textColor} ${textHoverColor} transition-colors font-medium text-sm whitespace-nowrap group`}
+                >
+                  {link.label}
+                  <span className={`absolute -bottom-1 left-0 w-0 h-0.5 ${underlineColor} group-hover:w-full transition-all duration-300`}></span>
+                </a>
+              ) : link.isRoute ? (
                 <Link
                   key={link.href}
                   to={link.href}
@@ -321,7 +332,26 @@ const Header = () => {
                           };
                           const colors = colorMap[item.id] || { bg: "bg-gray-50", text: "text-gray-600" };
 
-                          return item.isRoute ? (
+                          return item.isExternal ? (
+                            <a
+                              key={item.id}
+                              href={item.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-all duration-200 group/item"
+                            >
+                              <div className={`w-9 h-9 rounded-lg ${colors.bg} flex items-center justify-center flex-shrink-0`}>
+                                <IconComponent className={`h-4 w-4 ${colors.text}`} />
+                              </div>
+                              <div className="flex-1 min-w-0">
+                                <div className="flex items-center gap-1.5">
+                                  <span className="font-semibold text-gray-900 text-sm">{item.name}</span>
+                                  <ExternalLink className="h-3 w-3 text-gray-400" />
+                                </div>
+                                <p className="text-xs text-gray-500 mt-0.5">{item.description}</p>
+                              </div>
+                            </a>
+                          ) : item.isRoute ? (
                             <Link
                               key={item.id}
                               to={item.href}
@@ -421,7 +451,19 @@ const Header = () => {
         >
           <nav className={`flex flex-col space-y-1 pt-4 border-t ${isDarkMode ? "border-white/10" : "border-gray-100"}`}>
             {navLinks.map((link) =>
-              link.isRoute ? (
+              link.isExternal ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`px-4 py-3 ${isDarkMode ? "text-white hover:bg-white/10" : "text-gray-700 hover:text-ekam-primary hover:bg-ekam-primary/5"} rounded-lg transition-all font-medium flex items-center gap-2`}
+                  onClick={toggleMenu}
+                >
+                  {link.label}
+                  <ExternalLink className="h-3.5 w-3.5 opacity-50" />
+                </a>
+              ) : link.isRoute ? (
                 <Link
                   key={link.href}
                   to={link.href}
@@ -541,7 +583,27 @@ const Header = () => {
               };
               const colors = colorMap[item.id] || { bg: "bg-gray-50", text: "text-gray-600" };
 
-              return item.isRoute ? (
+              return item.isExternal ? (
+                <a
+                  key={item.id}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`px-4 py-3 ${isDarkMode ? "text-white hover:bg-white/10" : "text-gray-700 hover:text-ekam-primary hover:bg-ekam-primary/5"} rounded-lg transition-all font-medium flex items-center gap-3`}
+                  onClick={toggleMenu}
+                >
+                  <div className={`w-8 h-8 rounded-lg ${colors.bg} flex items-center justify-center flex-shrink-0`}>
+                    <IconComponent className={`h-4 w-4 ${colors.text}`} />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2">
+                      <span className="font-semibold">{item.name}</span>
+                      <ExternalLink className="h-3 w-3 opacity-50" />
+                    </div>
+                    <p className={`text-xs ${isDarkMode ? "text-white/60" : "text-gray-500"}`}>{item.description}</p>
+                  </div>
+                </a>
+              ) : item.isRoute ? (
                 <Link
                   key={item.id}
                   to={item.href}
