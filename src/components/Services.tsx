@@ -70,9 +70,9 @@ const Services = () => {
   ];
 
   return (
-    <section ref={sectionRef} id="services" className="py-24 bg-gray-50 relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(1,58,55,0.08),rgba(255,255,255,0))]" />
+    <section ref={sectionRef} id="services" className="py-24 bg-gradient-to-b from-white via-gray-50/50 to-white relative overflow-hidden">
+      {/* Light green tint background */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_50%_0%,rgba(74,222,128,0.06),transparent)]" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}

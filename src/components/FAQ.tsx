@@ -30,8 +30,10 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="py-16 bg-white">
-      <div className="max-w-4xl mx-auto px-8">
+    <section className="py-16 bg-gradient-to-b from-white via-gray-50/50 to-white relative overflow-hidden">
+      {/* Light green tint background */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_50%_0%,rgba(74,222,128,0.06),transparent)]" />
+      <div className="relative max-w-4xl mx-auto px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
             Frequently Asked Questions

@@ -29,28 +29,27 @@ const ClientTestimonial = () => {
       title: "AI Social Media Automation",
       description: "Transformed content creation workflow with intelligent automation, reducing production time by 70%",
       videoUrl: "https://www.youtube.com/embed/6gp2a6llZYM",
-      category: "Content Marketing",
-      gradient: "from-purple-500 to-pink-500"
+      category: "Content Marketing"
     },
     {
       title: "Custom API Integration",
       description: "Intelligent AI agents for product discovery, improving customer experience and conversion rates",
       videoUrl: "https://www.youtube.com/embed/jM_dnvqkad8",
-      category: "E-commerce",
-      gradient: "from-blue-500 to-cyan-500"
+      category: "E-commerce"
     },
     {
       title: "Blog Automation Success",
       description: "AI-powered content creation system generating high-quality posts with minimal human intervention",
       videoUrl: "https://www.youtube.com/embed/3BwP6GI7000",
-      category: "Content Creation",
-      gradient: "from-emerald-500 to-teal-500"
+      category: "Content Creation"
     }
   ];
 
   return (
-    <section ref={sectionRef} id="testimonials" className="py-24 bg-white relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section ref={sectionRef} id="testimonials" className="py-24 bg-gradient-to-b from-white via-gray-50/50 to-white relative overflow-hidden">
+      {/* Light green tint background */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_50%_0%,rgba(74,222,128,0.06),transparent)]" />
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <p className="text-sm font-semibold text-ekam-primary uppercase tracking-wider mb-4">CASE STUDIES</p>
@@ -71,8 +70,8 @@ const ClientTestimonial = () => {
               style={{ transitionDelay: `${300 + index * 150}ms` }}
             >
               <Card className="group relative border border-gray-100 shadow-sm hover:shadow-xl rounded-2xl overflow-hidden bg-white h-full transition-all duration-500 hover:-translate-y-2 hover:border-ekam-primary/20">
-                {/* Gradient accent line */}
-                <div className={`h-1 bg-gradient-to-r ${testimonial.gradient}`} />
+                {/* Green accent line */}
+                <div className="h-1 bg-gradient-to-r from-[#4ade80] to-emerald-500" />
 
                 <CardContent className="p-6">
                   {/* Category tag */}

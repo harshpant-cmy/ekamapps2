@@ -34,17 +34,17 @@ const Index = () => {
         {/* Expertise statement - HatchWorks inspired */}
         <ExpertiseStatement />
 
-        {/* AI Agents - Pre-built AI Solutions */}
-        <AIAgents />
-
-        {/* Projects showcase - Our work */}
+        {/* Projects showcase - Our work (shows real results first) */}
         <Projects />
 
-        {/* Flagship product showcase */}
+        {/* Flagship product showcase - Turrant.ai */}
         <TurrantShowcase />
 
         {/* How it works - Process flow */}
         <Process />
+
+        {/* AI Agents - Pre-built AI Solutions */}
+        <AIAgents />
 
         {/* Technology Stack */}
         <TechStack />

@@ -136,13 +136,13 @@ const TurrantShowcase = () => {
               {stats.map((stat, index) => (
                 <div
                   key={index}
-                  className={`bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-4 text-center transition-all duration-500 hover:bg-white/15 ${
+                  className={`group bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-4 text-center transition-all duration-500 hover:bg-white/20 hover:border-[#4ade80]/40 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#4ade80]/10 cursor-default ${
                     isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                   }`}
                   style={{ transitionDelay: `${500 + index * 100}ms` }}
                 >
-                  <div className="text-2xl lg:text-3xl font-bold text-white mb-1">{stat.value}</div>
-                  <div className="text-xs text-white/60">{stat.label}</div>
+                  <div className="text-2xl lg:text-3xl font-bold text-white mb-1 transition-colors duration-300 group-hover:text-[#4ade80]">{stat.value}</div>
+                  <div className="text-xs text-white/60 transition-colors duration-300 group-hover:text-white/80">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -154,16 +154,16 @@ const TurrantShowcase = () => {
                 return (
                   <div
                     key={index}
-                    className={`bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 transition-all duration-500 hover:bg-white/10 hover:border-white/20 ${
+                    className={`group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 transition-all duration-500 hover:bg-white/15 hover:border-[#4ade80]/30 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#4ade80]/5 cursor-default ${
                       isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                     }`}
                     style={{ transitionDelay: `${600 + index * 100}ms` }}
                   >
-                    <div className="w-10 h-10 rounded-lg bg-[#4ade80]/20 flex items-center justify-center mb-3">
-                      <IconComponent className="h-5 w-5 text-[#4ade80]" />
+                    <div className="w-10 h-10 rounded-lg bg-[#4ade80]/20 flex items-center justify-center mb-3 transition-all duration-300 group-hover:bg-[#4ade80]/30 group-hover:scale-110">
+                      <IconComponent className="h-5 w-5 text-[#4ade80] transition-transform duration-300 group-hover:scale-110" />
                     </div>
-                    <h4 className="font-semibold text-white text-sm mb-1">{feature.title}</h4>
-                    <p className="text-xs text-white/60 leading-relaxed">{feature.description}</p>
+                    <h4 className="font-semibold text-white text-sm mb-1 transition-colors duration-300 group-hover:text-[#4ade80]">{feature.title}</h4>
+                    <p className="text-xs text-white/60 leading-relaxed transition-colors duration-300 group-hover:text-white/80">{feature.description}</p>
                   </div>
                 );
               })}
@@ -174,7 +174,7 @@ const TurrantShowcase = () => {
               {["Finance", "Insurance", "HR", "Logistics", "Healthcare"].map((industry) => (
                 <span
                   key={industry}
-                  className="px-3 py-1.5 rounded-full bg-white/5 text-xs text-white/60 border border-white/10 hover:border-white/20 hover:bg-white/10 transition-all duration-300"
+                  className="px-3 py-1.5 rounded-full bg-white/5 text-xs text-white/60 border border-white/10 hover:border-[#4ade80]/40 hover:bg-[#4ade80]/10 hover:text-[#4ade80] hover:-translate-y-0.5 transition-all duration-300 cursor-default"
                 >
                   {industry}
                 </span>

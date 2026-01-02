@@ -52,8 +52,10 @@ const Process = () => {
   ];
 
   return (
-    <section ref={sectionRef} id="process" className="py-24 bg-white relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section ref={sectionRef} id="process" className="py-24 bg-gradient-to-b from-white via-gray-50/50 to-white relative overflow-hidden">
+      {/* Light green tint background */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_50%_0%,rgba(74,222,128,0.06),transparent)]" />
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <p className="text-sm font-semibold text-ekam-primary uppercase tracking-wider mb-4">HOW IT WORKS</p>

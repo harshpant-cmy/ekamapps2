@@ -74,16 +74,16 @@ const ExpertiseStatement = () => {
             return (
               <div
                 key={index}
-                className="text-center"
+                className="group text-center p-6 rounded-2xl transition-all duration-500 hover:bg-white/5 hover:-translate-y-2 cursor-default"
                 style={{ transitionDelay: `${400 + index * 100}ms` }}
               >
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-white/5 border border-white/10 mb-5">
-                  <IconComponent className="h-7 w-7 text-[#4ade80]" />
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-white/5 border border-white/10 mb-5 transition-all duration-300 group-hover:bg-[#4ade80]/20 group-hover:border-[#4ade80]/30 group-hover:scale-110">
+                  <IconComponent className="h-7 w-7 text-[#4ade80] transition-transform duration-300 group-hover:scale-110" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">
+                <h3 className="text-xl font-bold text-white mb-3 transition-colors duration-300 group-hover:text-[#4ade80]">
                   {pillar.title}
                 </h3>
-                <p className="text-white/60 leading-relaxed">
+                <p className="text-white/60 leading-relaxed transition-colors duration-300 group-hover:text-white/80">
                   {pillar.description}
                 </p>
               </div>

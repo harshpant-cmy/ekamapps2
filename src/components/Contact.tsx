@@ -33,10 +33,10 @@ const Contact = () => {
   ];
 
   return (
-    <section ref={sectionRef} id="contact" className="py-20 bg-gray-50 relative overflow-hidden">
-      {/* Subtle background effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(1,58,55,0.03),rgba(255,255,255,0))]"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-ekam-primary/5 rounded-full blur-3xl"></div>
+    <section ref={sectionRef} id="contact" className="py-20 bg-gradient-to-b from-white via-gray-50/50 to-white relative overflow-hidden">
+      {/* Light green tint background */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_50%_0%,rgba(74,222,128,0.06),transparent)]"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#4ade80]/5 rounded-full blur-3xl"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
