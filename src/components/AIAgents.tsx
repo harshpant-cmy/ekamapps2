@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Users, Video, MessageSquare, Headphones, FileText, Plane, Camera, Phone, Scale, ArrowRight, Sparkles, Check, ExternalLink, ChevronLeft, ChevronRight, Zap, Star } from "lucide-react";
+import { Users, Video, MessageSquare, Headphones, FileText, Plane, Camera, Phone, Scale, ArrowRight, Sparkles, Check, ExternalLink, ChevronLeft, ChevronRight, Zap, Star, X, ZoomIn } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 
@@ -122,8 +122,20 @@ const AIAgents = () => {
   const [activeCategory, setActiveCategory] = useState("all");
   const [activeIndex, setActiveIndex] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
+  const [lightboxImage, setLightboxImage] = useState<{ src: string; title: string } | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
   const carouselRef = useRef<HTMLDivElement>(null);
+
+  // Close lightbox on escape key
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setLightboxImage(null);
+      }
+    };
+    window.addEventListener('keydown', handleEscape);
+    return () => window.removeEventListener('keydown', handleEscape);
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -230,7 +242,7 @@ const AIAgents = () => {
               {/* Featured Agent Card - Large Format */}
               <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-3xl border border-white/5 overflow-hidden">
 
-                <div className="relative grid lg:grid-cols-2 gap-6 p-6 lg:p-8">
+                <div className="relative grid lg:grid-cols-2 gap-8 p-6">
                   {/* Left Content */}
                   <div className="flex flex-col justify-center order-2 lg:order-1">
                     {/* Badge & Category */}
@@ -301,19 +313,28 @@ const AIAgents = () => {
 
                   {/* Right Visual */}
                   <div className="relative order-1 lg:order-2 flex items-center justify-center">
-                    {/* Workflow Image - Fixed size container */}
-                    <div className="relative w-full max-w-[420px] mx-auto">
-                      <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden border border-white/5 bg-white shadow-xl">
+                    {/* Workflow Image - Larger size container - Clickable */}
+                    <div className="relative w-full max-w-[500px] mx-auto">
+                      <button
+                        onClick={() => setLightboxImage({ src: activeAgent.image, title: activeAgent.title })}
+                        className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 bg-white shadow-2xl cursor-zoom-in group"
+                      >
                         <img
                           src={activeAgent.image}
                           alt={`${activeAgent.title} workflow`}
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                         />
-                      </div>
+                        {/* Zoom overlay on hover */}
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
+                          <div className="w-12 h-12 rounded-full bg-white/90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg">
+                            <ZoomIn className="h-6 w-6 text-gray-800" />
+                          </div>
+                        </div>
+                      </button>
                     </div>
 
                     {/* Floating badges */}
-                    <div className="absolute top-1 right-1 lg:-top-1 lg:-right-1 px-2.5 py-1 bg-[#4ade80] rounded-full text-gray-900 text-xs font-bold shadow-lg">
+                    <div className="absolute top-2 right-2 lg:top-0 lg:right-0 px-3 py-1.5 bg-[#4ade80] rounded-full text-gray-900 text-xs font-bold shadow-lg">
                       Ready to Deploy
                     </div>
                   </div>
@@ -451,6 +472,58 @@ const AIAgents = () => {
         }
         .animate-float {
           animation: float linear infinite;
+        }
+      `}</style>
+
+      {/* Lightbox Modal */}
+      {lightboxImage && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm animate-fadeIn"
+          onClick={() => setLightboxImage(null)}
+        >
+          {/* Close button */}
+          <button
+            onClick={() => setLightboxImage(null)}
+            className="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all duration-300 border border-white/20 hover:border-white/40 group z-10"
+          >
+            <X className="h-6 w-6 group-hover:rotate-90 transition-transform duration-300" />
+          </button>
+
+          {/* Image title */}
+          <div className="absolute top-6 left-6 text-white z-10">
+            <p className="text-lg font-semibold">{lightboxImage.title}</p>
+            <p className="text-sm text-white/60">Click anywhere or press ESC to close</p>
+          </div>
+
+          {/* Image container */}
+          <div
+            className="relative max-w-[90vw] max-h-[85vh] animate-scaleIn"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={lightboxImage.src}
+              alt={lightboxImage.title}
+              className="max-w-full max-h-[85vh] object-contain rounded-xl shadow-2xl"
+            />
+          </div>
+        </div>
+      )}
+
+      {/* Lightbox animations */}
+      <style>{`
+        @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+        @keyframes scaleIn {
+          from { transform: scale(0.9); opacity: 0; }
+          to { transform: scale(1); opacity: 1; }
+        }
+        .animate-fadeIn {
+          animation: fadeIn 0.2s ease-out forwards;
+        }
+        .animate-scaleIn {
+          animation: scaleIn 0.3s ease-out forwards;
         }
       `}</style>
     </section>

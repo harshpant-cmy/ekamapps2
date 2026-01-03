@@ -13,7 +13,17 @@
       "Bash(timeout:*)",
       "Bash(ping:*)",
       "Bash(npm run build:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(copy:*)",
+      "Bash(cmd /c copy \"C:\\\\ekamapps2\\\\images\\\\Aditya Gupta.png\" \"C:\\\\ekamapps2\\\\public\\\\lovable-uploads\\\\aditya-gupta.png\")",
+      "Bash(cmd /c dir \"C:\\\\ekamapps2\\\\public\\\\lovable-uploads\\\\aditya-gupta.png\")",
+      "Bash(cmd /c \"copy \"\"C:\\\\ekamapps2\\\\images\\\\Aditya Gupta.png\"\" \"\"C:\\\\ekamapps2\\\\public\\\\lovable-uploads\\\\aditya-gupta.png\"\"\")",
+      "Bash(cmd /c xcopy \"C:\\\\ekamapps2\\\\images\\\\Aditya Gupta.png\" \"C:\\\\ekamapps2\\\\public\\\\lovable-uploads\\\\aditya-gupta.png*\" /Y)",
+      "Bash(powershell:*)",
+      "Bash(cd:*)",
+      "Bash(git remote set-url:*)",
+      "Bash(dir \"C:\\\\ekamapps2\\\\images\\\\AI Stack\" /b)",
+      "Bash(dir \"C:\\\\ekamapps2\\\\images\\\\Software Stack\" /b)"
     ]
   }
 }
