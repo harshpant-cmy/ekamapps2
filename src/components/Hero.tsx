@@ -59,7 +59,7 @@ const Hero = () => {
               We engineer production-grade AI agents, voice systems, and automation infrastructure that scales with your business.
             </p>
             <p className="text-white/80 font-medium">
-              No templates. No fluff. Custom-built for real business impact.
+              No templates. No compromises. Custom-built for real business impact.
             </p>
           </div>
 

@@ -23,7 +23,9 @@
       "Bash(cd:*)",
       "Bash(git remote set-url:*)",
       "Bash(dir \"C:\\\\ekamapps2\\\\images\\\\AI Stack\" /b)",
-      "Bash(dir \"C:\\\\ekamapps2\\\\images\\\\Software Stack\" /b)"
+      "Bash(dir \"C:\\\\ekamapps2\\\\images\\\\Software Stack\" /b)",
+      "Bash(git fetch:*)",
+      "Bash(cat:*)"
     ]
   }
 }
